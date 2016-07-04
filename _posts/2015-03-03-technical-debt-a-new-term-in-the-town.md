@@ -3,10 +3,6 @@ layout: post
 title: "Technical Debt: A new term in the town "
 modified: 2015-03-03 16:58:18 +0530
 tags: [Software Engineering,Devops]
-image:
-  feature: abstract-6.jpg
-  credit: 
-  creditlink: 
 comments: True
 share: True
 description: 
