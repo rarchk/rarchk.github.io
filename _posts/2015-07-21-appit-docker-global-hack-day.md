@@ -2,7 +2,7 @@
 layout: post
 title: "Appit: git for desktop application environments "
 modified: 2015-07-21 16:58:18 +0530
-tags: Software Engineering,docker
+tags: [Software Engineering,docker]
 banner_image: abstract-6.jpg
 comments: True
 share: True

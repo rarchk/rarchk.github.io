@@ -14,27 +14,26 @@ title: Blog
       <ul >
     {% endif %}
 
-    <li >
-      <font size=4>
+    <li>
+      
+      <font size="4"> 
       <b>
       <a href="{{ post.url | append: '/' | replace: '//', '/' | prepend: site.baseurl | prepend: site.url |  }}">
         {{ post.title }}
       </a>
     </b>
-    </font>
-    
-
-    <font size=4>
-    <span class="post-date" style="float: right;"> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d" }}</time> </span> 
-  </font>
+    </span>
+    <span  style="float: right;"> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d" }}</time> </span> 
+  
     {% if post.tags %}
     <br> 
     {% for tag in post.tags %}
     <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
     {% endfor %}
     {% endif %}
-    <hr>
-
+    <br>
+    <br>
+    </font>
     </li>
 
     {% if forloop.last %}

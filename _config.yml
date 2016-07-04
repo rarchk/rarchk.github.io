@@ -37,7 +37,7 @@ author:
     bars:           /blog/ || Blog
     desktop:        /projects/ || Projects
     graduation-cap: /public/data/RonakKogta_CurriculumVitae.pdf || Resume 
-    feed:           /atom.xml/ || Feed
+    feed:           /atom.xml || Feed
   
 # Navigation (2nd level links supported)
 nav:
@@ -47,10 +47,10 @@ nav:
     - '/blog/'
     - { Categories: '/blog/categories/' }
     - { Tags: '/blog/tags/' }
-  About:          
+  Current Me:          
     - '/about/'
-  Github Project: 
-    - 'http://rarchk.github.io/'
+  Reflections: 
+    - '/reflections/'
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
