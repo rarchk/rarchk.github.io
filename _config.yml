@@ -1,0 +1,70 @@
+# Site Info
+title: A λ's Journey To Π 
+tagline: ' Suggesting finite axioms for the infinite world.'
+description: 'My personal website'
+baseurl: "" #/lanyon" # to be used when going for sub-directory  
+url: "http://rarchk.github.io" # "http://localhost:4000"
+logo: '/public/logo2.png'
+
+# Site configurations
+gems:
+  - jekyll-paginate
+markdown: kramdown
+kramdown:
+  input: GFM
+excerpt_separator: "<!-- more -->"
+sass:
+  style: compressed
+  sass_dir: _scss    
+paginate: 5
+paginate_path: '/blog/page:num'
+permalink: pretty
+
+version: 1.0.0
+
+# About/contact
+author:
+  name: Ronak Kogta
+  description: A passionate <strong>developer and researcher</strong>, learning to be a giant.
+  gravatar: 4fdd54188938153e8203fbf3f8417a15 # md5 hash of your email address
+  contact:
+    linkedin:  https://www.linkedin.com/in/ronakkogta
+    github:    https://github.com/rarchk
+    # facebook:  <hide>
+    twitter:   https://twitter.com/rarchk
+    email:     http://www.google.com/recaptcha/mailhide/d?k\x3d01CIzJycu1pq2SHk5xVmq2RQ\x3d\x3d\x26c\x3dlBe-qtR3DTUeG_jldvPx-3bZV6esWSECuGNNBsZs9eA\x3d
+
+# Navigation (2nd level links supported)
+nav:
+  Home:           
+    - '/'
+  Blog:           
+    - '/blog/'
+    - { Categories: '/blog/categories/' }
+    - { Tags: '/blog/tags/' }
+  About:          
+    - '/about/'
+  Github Project: 
+    - 'http://rarchk.github.io/'
+
+# Where are tags and categories displayed
+tag_page: '/blog/tags/'
+category_page: '/blog/categories/'
+
+hero:
+  image: /public/img/we_will_be_giants_by_yalestewart.jpg
+  caption: Original Artwork &copy; <a href="http://yalestewart.deviantart.com/art/We-Will-Be-Giants-370176475">Yale Stewart</a>
+
+# Puglins
+mathjax: true # whether support mathjax
+google_analytics_token: 'UA-5613819-3' # leave blank if you don't want google analytics
+disqus_short_name: 'rarchkgithubio' # leave blank if you don't want disqus
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Rakefile
+  - README.md
+  - .gitignore
+  - .sass-cache
+  - Gemfile.lock
