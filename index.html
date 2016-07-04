@@ -4,10 +4,24 @@ title: Home
 ---
 
 <div >
-			<p class="lead"> Hi, I'm Ronak and I currently work at Clouber as Principal Engineer.</p>
+			<p class="lead"> Hi, I'm Ronak and I am a performance engineer.</p>
 			<p> I completed my masters in Computer Science from <i>IIIT Hyderabad </i> and my interest lies in <strong> distributed and high performance computing. </strong>. Currently, I'm involved in docker, golang and public clouds. <br>
 			I'm always looking for growth oppertunites, and interested in working with some of the best people out there.   
 			</p>
-                    
+</div>			
+<div class="Hero">
+			<p align="center">
+				{% for home in site.author.home %}
+				{% assign iconname = home[0] %}
+				{% assign metadata = home[1] | split:'||' %}
+				 
+				<a href="{{ metadata[0] }}">
+				<i class="fa fa-{{ iconname }}" aria-hidden="true"> {{ metadata[1] }} </i>
+				</a>
+				{% assign current_index = current_index | plus: 1 %}
+				{% if current_index != len %}&nbsp;&nbsp;&nbsp;{% endif %}
+				{% endfor %}
+			</p>
+				
 </div>
 
