@@ -4,7 +4,7 @@ tagline: ' Suggesting finite axioms for the infinite world.'
 description: 'My personal website'
 baseurl: "" #/lanyon" # to be used when going for sub-directory  
 url: "http://rarchk.github.io" # "http://localhost:4000"
-logo: '/public/logo2.png'
+logo: '/public/logo.png'
 
 # Site configurations
 gems:
