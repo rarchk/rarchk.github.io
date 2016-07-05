@@ -12,20 +12,33 @@ title: Home
 	<i> And so I blog, about my discoveries, about my passion, about my thoughts and about my work.</i>
 </div>			
 
-<div class="Hero">
-			<h3 align="center">
-			
+<div >
+				<h3>
+				<div style="float: left; width:13%">
+                    &nbsp;
+                </div>
+
+
 				{% for home in site.author.home %}
-				{% assign iconname = home[0] %}
-				{% assign metadata = home[1] | split:'||' %}
-				 
-				<a href="{{ metadata[0] }}">
-				<i class="fa fa-{{ iconname }}" aria-hidden="true"> {{ metadata[1] }} </i>
-				</a>
-				{% assign current_index = current_index | plus: 1 %}
-				{% if current_index != len %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{% endif %}
+					{% assign iconname = home[0] %}
+					{% assign metadata = home[1] | split:'||' %}
+					<div style="float: left; width:25%">
+					<center>
+						<font size="18">
+                    	<a href="{{ metadata[0] }}">
+                        <i class="fa fa-{{ iconname }}" aria-hidden="true"></i>
+                    	</a>
+                    	</font>
+                    	<p class="outline" style="color:#6a9fb5;">
+                        {{ metadata[1] }}
+                    	</p>
+                 	</center>
+                 	</div>
+                 	{% assign current_index = current_index | plus: 1 %}
 				{% endfor %}
+                
+                <br style="clear: left;" />
+				</h3>
 			
-			</h3>							
 </div>
 
