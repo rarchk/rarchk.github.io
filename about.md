@@ -1,8 +1,13 @@
 ---
 layout: page
-title: Current Me 
+title: About
+banner_image: wallpaper.jpg
+banner_image_alt: Now me
+comments: false
 ---
-Hi, I'm Ronak and I am a performance engineer.
+Hi, 
 
-I completed my masters in Computer Science from IIIT Hyderabad and my interest lies in distributed and high performance computing. . Currently, I'm involved in docker, golang and public clouds.
-I'm always looking for growth oppertunites, and interested in working with some of the best people out there.
+I like to think that I'm a systems engineer, but I'm still far away from learning all caveats of this field. 
+I completed my masters in Computer Science from IIIT Hyderabad and my interest lies in distributed and high performance computing. 
+
+Currently, I'm actively working on *containers and their applications in public cloud.* I've been interested in distributed tracing, debugging and Infrastructure as a Code lately. I'm always looking for growth opportunities in this field, and would be interested in working with people with similar or greater kind of passion. 
