@@ -3,12 +3,13 @@ title: A λ's Journey To Π
 tagline: ' Suggesting finite axioms for the infinite world.'
 description: 'My personal website'
 #baseurl: "" #/lanyon" # to be used when going for sub-directory  
-url: "http://rarchk.github.io/" # "http://localhost:4000/"
+url: "https://rarchk.github.io/" # "https://localhost:4000/"
 logo: '/public/logo.png'
 
 # Site configurations
 gems:
   - jekyll-paginate
+#  - jekyll-language-plugin
 markdown: kramdown
 kramdown:
   input: GFM
@@ -19,8 +20,9 @@ sass:
 paginate: 13
 paginate_path: '/blog/page:num'
 permalink: pretty
-
 version: 1.0.0
+#language_data: data.lang.hi
+#language_includes_dir: _i18n
 
 # About/contact
 author:
@@ -29,15 +31,18 @@ author:
   gravatar: 4fdd54188938153e8203fbf3f8417a15 # md5 hash of your email address
   contact:
     linkedin:  https://www.linkedin.com/in/ronakkogta
-    github:    https://github.com/rarchk
+    github-alt:    https://github.com/rarchk
     stack-overflow:    http://stackoverflow.com/users/733761/rarchk 
     twitter:   https://twitter.com/rarchk
-    email:     http://www.google.com/recaptcha/mailhide/d?k\x3d01CIzJycu1pq2SHk5xVmq2RQ\x3d\x3d\x26c\x3dlBe-qtR3DTUeG_jldvPx-3bZV6esWSECuGNNBsZs9eA\x3d
+    email:     https://www.google.com/recaptcha/mailhide/d?k\x3d01CIzJycu1pq2SHk5xVmq2RQ\x3d\x3d\x26c\x3dlBe-qtR3DTUeG_jldvPx-3bZV6esWSECuGNNBsZs9eA\x3d
+    rss-square: /atom.xml
   home:
-    bars:           /blog/ || Blog
-    desktop:        /projects/ || Projects
-    graduation-cap: /public/data/RonakKogta_CurriculumVitae.pdf || Resume 
-    feed:           /atom.xml || Feed
+    newspaper-o:           /blog/ || Blog
+    lightbulb-o:  /reflections || Reflections
+    laptop:        /projects/ || Projects
+  subhome:  
+    book: /public/data/RonakKogta_CurriculumVitae.pdf || Resume 
+     
   
 # Navigation (2nd level links supported)
 nav:
@@ -47,17 +52,22 @@ nav:
     - '/blog/'
     - { Categories: '/blog/categories/' }
     - { Tags: '/blog/tags/' }
+  Reflections: 
+    - '/reflections/'  
   Current Me:          
     - '/about/'
-  Reflections: 
-    - '/reflections/'
+
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
 
+#Quotes Project 
+quotes: 
+  Dead Poets Society: Listen, you hear it? — Carpe — hear it? — Carpe, carpe diem,
+    seize the day boys, make your lives extraordinary.
 
-# Puglins
+# Plugins
 mathjax: true # whether support mathjax
 google_analytics_token: 'UA-5613819-3' # leave blank if you don't want google analytics
 disqus_short_name: 'rarchkgithubio' # leave blank if you don't want disqus
