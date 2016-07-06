@@ -14,7 +14,7 @@ title: Home
 
 <div >
 				<h3>
-				<div style="float: left; width:13%">
+				<div style="float: left; width:19%">
                     &nbsp;
                 </div>
 
@@ -22,7 +22,7 @@ title: Home
 				{% for home in site.author.home %}
 					{% assign iconname = home[0] %}
 					{% assign metadata = home[1] | split:'||' %}
-					<div style="float: left; width:26%">
+					<div style="float: left; width:28%">
 					<center>
 						<font size="18">
                     	<a href="{{ metadata[0] }}">
@@ -44,7 +44,7 @@ title: Home
 
 <div >
 				<h3>
-				<div style="float: left; width:13%">
+				<div style="float: left; width:19%">
                     &nbsp;
                 </div>
 
@@ -52,7 +52,7 @@ title: Home
 				{% for home in site.author.subhome %}
 					{% assign iconname = home[0] %}
 					{% assign metadata = home[1] | split:'||' %}
-					<div style="float: left; width:26%">
+					<div style="float: left; width:28%">
 					<center>
 						<font size="18">
                     	<a href="{{ metadata[0] }}">
@@ -62,6 +62,35 @@ title: Home
                         {{ metadata[1] }}
                     	</p>
                     	</a>
+                 	</center>
+                 	</div>
+                 	{% assign current_index = current_index | plus: 1 %}
+				{% endfor %}
+                
+                <br style="clear: left;" />
+				</h3>
+			
+</div>
+<div >
+				<h3>
+				<div style="float: left; width:19%">
+                    &nbsp;
+                </div>
+
+
+				{% for home in site.author.metahome %}
+					{% assign iconname = home[0] %}
+					{% assign metadata = home[1] | split:'||' %}
+					<div style="float: left; width:28%">
+					<center>
+						<font size="18">
+                    	<a href="{{ metadata[0] }}">
+                        <i class="fa fa-{{ iconname }}" aria-hidden="true"></i>
+                    	</font>
+                    	<p class="outline" style="color:#6a9fb5;">
+                        {{ metadata[1] }}
+                    	</p>
+                    	</a
                  	</center>
                  	</div>
                  	{% assign current_index = current_index | plus: 1 %}

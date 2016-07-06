@@ -39,9 +39,10 @@ author:
   home:
     newspaper-o:           /blog/ || Blog
     lightbulb-o:  /reflections || Reflections
-    laptop:        /projects/ || Projects
-  subhome:  
-    file-powerpoint-o: /presentations/ || Presentations 
+  subhome:
+    laptop:        /projects/ || Projects  
+    file-powerpoint-o: /presentations/ || Presentations
+  metahome:   
     bookmark-o: /bookmarks || Bookmarks
     quote-left: /quotes || Quote Project  
   
