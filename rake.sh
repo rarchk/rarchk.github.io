@@ -1,7 +1,9 @@
+
 #!/bin/bash
 
 # bash application to maintain your jekyll website
 
+# Create new_post 
 function new_post()
 {
 	imagedir="public/images"
@@ -25,15 +27,15 @@ function new_post()
 	echo "Enter manual date: "
 	read postdate;
 	
-	postdate=$(date +%Y-%m-%d);
-	if [ $postdate == "" ];
-		then
-			postdate= `date +%Y-%m-%d`;
-	fi
 	
+	if [ ! -z $postdate ];
+		then
+			postdate= $(date +%Y-%m-%d);
+	fi
+	echo $postdate
 	echo "Enter banner image: "
 	read banner_image;
-	if [ $banner_image != "" ];
+	if [ ! -z $banner_image ];
 		then 
 			banner_image=$(echo $imagedir/$banner_image)
 			echo "Enter banner image alt: "
@@ -44,32 +46,90 @@ function new_post()
 	filename="$postdate-$title.md"
 	if [ -f "$postdir/$filename" ];
 	then
-   		echo "File $filename exists."
-		exit;
+   		echo "File $postdir/$filename exists."
+		return;
 	fi
 
 	echo "Creating new post: $postdir/$filename"
 
-	echo "---" >> $postdir/$filename
-    echo "layout: post" >> $postdir/$filename
-    echo "title: \"$origTitle\"" >> $postdir/$filename
-    echo "type: $typepost" >> $postdir/$filename
-    echo "tags: [$tags]" >> $postdir/$filename
-    echo "categories: [$categories]" >> $postdir/$filename
+	echo "---" >> "$postdir/$filename"
+    echo "layout: post" >> "$postdir/$filename"
+    echo "title: $origTitle" >> "$postdir/$filename"
+    echo "type: $typepost" >> "$postdir/$filename"
+    echo "tags: [$tags]" >> "$postdir/$filename"
+    echo "categories: [$categories]" >> "$postdir/$filename"
 
-    if [ $banner_image != "" ];
+    if [ ! -z $banner_image ];
 		then 
-			echo "banner_image: $banner_image" >> $postdir/$filename
-    		echo "banner_image_alt: $banner_image_alt" >> $postdir/$filename
+			echo "banner_image: $banner_image" >> "$postdir/$filename"
+    		echo "banner_image_alt: $banner_image_alt" >> "$postdir/$filename"
 	fi
-    echo "---" >> $postdir/$filename
-
-
-
-
+    echo "---" >> "$postdir/$filename"; 
 }
 
+# Create new_page
 function new_page()
 {
-	echo "Usage: ./rake.sh new_page()"
-}    
+	imagedir="public/images"
+
+	echo "Enter title of the page: "; 
+	read title;
+	origTitle=$title;
+	title=$(echo "$title" | tr '[:upper:]' '[:lower:]' | sed -e 's/[^0-9a-z\-]/ /g' | sed -e 's/  */ /g' | sed -e 's/ $//g' |  tr " " -);
+	
+	echo "Enter banner image: "
+	read banner_image;
+	if [ ! -z $banner_image ];
+		then 
+			banner_image=$(echo $imagedir/$banner_image)
+			echo "Enter banner image alt: "
+			read banner_image_alt;
+	fi
+	
+	# check whether post exists or not 
+	filename="$title.md"
+	if [ -f "$filename" ];
+	then
+   		echo "File $filename exists."
+		return;
+	fi
+
+	echo "Creating new page: $filename"
+
+	echo "---" >> $filename
+    echo "layout: page" >> $filename
+    echo "title: $origTitle" >> $filename
+    
+    if [ ! -z $banner_image ];
+		then 
+			echo "banner_image: $banner_image" >> $filename
+    		echo "banner_image_alt: $banner_image_alt" >> $filename
+    	else
+    		echo "banner_image: " >> $filename
+    		echo "banner_image_alt: " >> $filename	
+	fi
+    echo "---" >> $filename; 
+}
+
+function  preview()
+{
+	bundle exec jekyll serve --watch;
+}
+
+function check()
+{
+	bundle exec jekyll doctor;
+}
+
+function init()
+{
+	bundle install 
+}
+
+echo ''' rake: Usage
+	init:		Install prerequisties
+	new_post:	Create new_post
+	new_page:	Create new_page
+	preview:	Previewing site with jekyll
+	check:		Search site and print specific deprecation warnings
+''' 

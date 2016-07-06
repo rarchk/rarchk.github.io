@@ -2,17 +2,23 @@
 layout: page
 title: Categories
 ---
-
-<div class="tags-expo">
-  <div class="tags-expo-list">
+<hr style="border: 3px solid #6a9fb5" />
+<div class="tags-expo" >
+  <div class="tags-expo-list" style="  border-radius: 25px; padding: 20px; background-color:#FFF5DB;">
+    
     {% for tag in site.categories %}
-    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+    <b>
+    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }} 
+    <span style="border-radius: 100px; background: #fff; color:black; padding:2px 7px;"> 
+    {{ tag[1].size }} </span>  </a>
+    </b>
     {% endfor %}
+
   </div>
-  <hr/>
+  
   <div class="tags-expo-section">
     {% for tag in site.categories %}
-    <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+    <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}  </h2>
     <ul class="tags-expo-posts">
       {% for post in tag[1] %}
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">

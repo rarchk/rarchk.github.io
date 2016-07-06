@@ -3,7 +3,6 @@ layout: page
 title: About
 banner_image: wallpaper.jpg
 banner_image_alt: Now me
-comments: false
 ---
 Hi, 
 

@@ -27,21 +27,23 @@ version: 1.0.0
 # About/contact
 author:
   name: Ronak Kogta
-  description: A passionate <strong>developer and researcher</strong>, learning to be a giant.
-  gravatar: 4fdd54188938153e8203fbf3f8417a15 # md5 hash of your email address
+  description: An engineer in the pursuit of <strong>persistent and exciting.</strong> Also trying to be a blogger.
+
+  #gravatar:  # md5 hash of your email address
+  profile: /public/images/profile.jpg
   contact:
     linkedin:  https://www.linkedin.com/in/ronakkogta
     github-alt:    https://github.com/rarchk
     stack-overflow:    http://stackoverflow.com/users/733761/rarchk 
     twitter:   https://twitter.com/rarchk
     email:     https://www.google.com/recaptcha/mailhide/d?k\x3d01CIzJycu1pq2SHk5xVmq2RQ\x3d\x3d\x26c\x3dlBe-qtR3DTUeG_jldvPx-3bZV6esWSECuGNNBsZs9eA\x3d
-    rss-square: /atom.xml
+    rss: /atom.xml
   home:
-    newspaper-o:           /blog/ || Blog
-    lightbulb-o:  /reflections || Reflections
+    newspaper-o:   /blog/ || Blog
+    lightbulb-o:  /blog/reflections || Reflections
   subhome:
-    laptop:        /projects/ || Projects  
-    file-powerpoint-o: /presentations/ || Presentations
+    laptop:        /blog/projects/ || Projects  
+    file-powerpoint-o: /blog/presentations/ || Presentations
   metahome:   
     bookmark-o: /bookmarks || Bookmarks
     quote-left: /quotes || Quote Project  
@@ -55,7 +57,7 @@ nav:
   Curriculum Vitae:
     - '/public/data/RonakKogta_CurriculumVitae.pdf'
   Archive:
-  - /archive/
+  - '/blog/archive'
   - { Categories: '/blog/categories/' }
   - { Tags: '/blog/tags/' }        
 
