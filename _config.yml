@@ -41,8 +41,9 @@ author:
     lightbulb-o:  /reflections || Reflections
     laptop:        /projects/ || Projects
   subhome:  
-    book: /public/data/RonakKogta_CurriculumVitae.pdf || Resume 
-     
+    file-powerpoint-o: /presentations/ || Presentations 
+    bookmark-o: /bookmarks || Bookmarks
+    quote-left: /quotes || Quote Project  
   
 # Navigation (2nd level links supported)
 nav:
