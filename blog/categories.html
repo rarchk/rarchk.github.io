@@ -8,9 +8,9 @@ title: Categories
     
     {% for tag in site.categories %}
     <b>
-    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }} 
-    <span style="border-radius: 100px; background: #fff; color:black; padding:2px 7px;"> 
-    {{ tag[1].size }} </span>  </a>
+    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }} &nbsp;
+    <span style="border-radius: 100px; background: #fff; color:#525250; padding:1px 6px;"> 
+     {{ tag[1].size }} </span>  </a>
     </b>
     {% endfor %}
 

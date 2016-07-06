@@ -33,19 +33,19 @@ author:
   profile: /public/images/profile.jpg
   contact:
     linkedin:  https://www.linkedin.com/in/ronakkogta
-    github-alt:    https://github.com/rarchk
+    github:    https://github.com/rarchk
     stack-overflow:    http://stackoverflow.com/users/733761/rarchk 
     twitter:   https://twitter.com/rarchk
     email:     https://www.google.com/recaptcha/mailhide/d?k\x3d01CIzJycu1pq2SHk5xVmq2RQ\x3d\x3d\x26c\x3dlBe-qtR3DTUeG_jldvPx-3bZV6esWSECuGNNBsZs9eA\x3d
     rss: /atom.xml
   home:
-    newspaper-o:   /blog/ || Blog
-    lightbulb-o:  /blog/reflections || Reflections
+    pencil-square:   /blog/ || Blog
+    institution:  /blog/reflections || Reflections
   subhome:
-    laptop:        /blog/projects/ || Projects  
-    file-powerpoint-o: /blog/presentations/ || Presentations
+    github-alt:        /blog/projects/ || Projects  
+    briefcase: /blog/work || Work
   metahome:   
-    bookmark-o: /bookmarks || Bookmarks
+    chevron-circle-down: /bookmarks || Bookmarks
     quote-left: /quotes || Quote Project  
   
 # Navigation (2nd level links supported)
