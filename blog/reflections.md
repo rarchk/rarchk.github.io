@@ -1,10 +1,12 @@
 ---
-layout: default
+layout: page
 title: Reflections
+banner_image: 
+banner_image_alt: 
 ---
 
-  <article class="post">
-{% for post in paginator.posts %}
+<article class="post">
+{% for post in site.posts %}
     {% capture this_month %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% capture next_month %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
@@ -13,7 +15,7 @@ title: Reflections
       <h2 id="{{ this_month }}-ref">{{ this_month }}</h2>
       <ul >
     {% endif %}
-
+    {% if post.type contains "ref" %}
     <li>
       
       <font size="4"> 
@@ -22,7 +24,7 @@ title: Reflections
         {{ post.title }}
       </a>
     </b>
-    </span>
+    
     <span  style="float: right;"> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d" }}</time> </span> 
   
     {% if post.tags %}
@@ -35,7 +37,7 @@ title: Reflections
     <br>
     </font>
     </li>
-
+    {% endif %}
     {% if forloop.last %}
       </ul>
     {% else %}
@@ -75,5 +77,3 @@ title: Reflections
     }
 }
 </script>
-
-

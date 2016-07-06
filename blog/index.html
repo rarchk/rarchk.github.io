@@ -14,6 +14,7 @@ title: Blog
       <ul >
     {% endif %}
 
+    {% if post.type contains "blog" %}
     <li>
       
       <font size="4"> 
@@ -35,7 +36,8 @@ title: Blog
     <br>
     </font>
     </li>
-
+    {% endif %}
+    
     {% if forloop.last %}
       </ul>
     {% else %}

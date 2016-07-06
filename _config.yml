@@ -40,13 +40,13 @@ author:
     rss: /atom.xml
   home:
     pencil-square:   /blog/ || Blog
-    institution:  /blog/reflections || Reflections
+    institution:    /blog/reflections || Reflections
   subhome:
-    github-alt:        /blog/projects/ || Projects  
+    github-alt: /blog/projects/ || Projects  
     briefcase: /blog/work || Work
   metahome:   
-    chevron-circle-down: /bookmarks || Bookmarks
-    quote-left: /quotes || Quote Project  
+    chevron-circle-down: /blog/bookmarks || Bookmarks
+    quote-left: /blog/quote-project || Quote Project  
   
 # Navigation (2nd level links supported)
 nav:

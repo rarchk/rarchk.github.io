@@ -24,14 +24,8 @@ function new_post()
 	echo "Enter Category to which your post belong (comma separated): "
 	read categories; 
 	
-	echo "Enter manual date: "
-	read postdate;
-	
-	
-	if [ ! -z $postdate ];
-		then
-			postdate= $(date +%Y-%m-%d);
-	fi
+	postdate=$(date +%Y-%m-%d);
+
 	echo $postdate
 	echo "Enter banner image: "
 	read banner_image;
@@ -71,6 +65,7 @@ function new_post()
 function new_page()
 {
 	imagedir="public/images"
+	pagedir="blog"
 
 	echo "Enter title of the page: "; 
 	read title;
@@ -96,19 +91,19 @@ function new_page()
 
 	echo "Creating new page: $filename"
 
-	echo "---" >> $filename
-    echo "layout: page" >> $filename
-    echo "title: $origTitle" >> $filename
+	echo "---" >> "$pagedir/$filename"
+    echo "layout: page" >> "$pagedir/$filename"
+    echo "title: $origTitle" >> "$pagedir/$filename"
     
     if [ ! -z $banner_image ];
 		then 
-			echo "banner_image: $banner_image" >> $filename
-    		echo "banner_image_alt: $banner_image_alt" >> $filename
+			echo "banner_image: $banner_image" >> "$pagedir/$filename"
+    		echo "banner_image_alt: $banner_image_alt" >> "$pagedir/$filename"
     	else
-    		echo "banner_image: " >> $filename
-    		echo "banner_image_alt: " >> $filename	
+    		echo "banner_image: " >> "$pagedir/$filename"
+    		echo "banner_image_alt: " >> "$pagedir/$filename"	
 	fi
-    echo "---" >> $filename; 
+    echo "---" >> "$pagedir/$filename"; 
 }
 
 function  preview()
