@@ -15,7 +15,12 @@ The theme supports:
 3. Integration of FontAwesome, MathJax, Disqus and Google Analytics
 4. and numerous improvements over original Lanyon
 
-
+# Rake.sh 
+```bash
+source rake.sh 
+new_post # Creates a new post 
+new_page # Creates a new page 
+```
 ## License
 
 Open sourced under the [MIT license](LICENSE.md).
