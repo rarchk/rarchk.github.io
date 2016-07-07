@@ -78,7 +78,7 @@ google_analytics_token: 'UA-5613819-3' # leave blank if you don't want google an
 disqus_short_name: 'rarchkgithubio' # leave blank if you don't want disqus
 
 # posts to show at github
-future:true
+future: true
 
 exclude:
   - CNAME
