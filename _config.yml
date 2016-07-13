@@ -9,6 +9,7 @@ logo: '/public/logo.png'
 # Site configurations
 gems:
   - jekyll-paginate
+  - jekyll-octicons
 #  - jekyll-language-plugin
 markdown: kramdown
 kramdown:

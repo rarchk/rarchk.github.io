@@ -121,10 +121,25 @@ function init()
 	bundle install 
 }
 
+function projects()
+{
+	#curl -i https://api.github.com/repos/$1 > repo.data
+	STARS=$(cat repo.data | grep stargazers_count | cut -d " " -f4 | cut -d "," -f1)
+	NAME=$(cat repo.data | grep full_name | cut -d "\"" -f4)
+	echo $NAME $STARS
+	echo ''' <div style="margin-right: 200px;">
+  <div style="float: left; width: 100%; background-color: #CCF;">{% octicon repo height:128 class:"right left" aria-label:hi %}</div>
+  <div style="float: right; width: 200px; margin-right: -200px; background-color: #FFA;">$STARS</div>
+  <div clear:both ></div>
+</div> '''
+	rm repo.data 
+}
+
 echo ''' rake: Usage
 	init:		Install prerequisties
 	new_post:	Create new_post
 	new_page:	Create new_page
 	preview:	Previewing site with jekyll
 	check:		Search site and print specific deprecation warnings
+	projects:	Build projects post 
 ''' 
