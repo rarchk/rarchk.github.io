@@ -10,6 +10,7 @@ logo: '/public/logo.png'
 gems:
   - jekyll-paginate
   - jekyll-octicons
+  - octicons
 #  - jekyll-language-plugin
 markdown: kramdown
 kramdown:
