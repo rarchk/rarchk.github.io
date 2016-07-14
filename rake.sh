@@ -125,24 +125,52 @@ function projects()
 {
 	curl -i https://api.github.com/repos/$1 > repo.data
 	STARS=$(cat repo.data | grep stargazers_count | cut -d " " -f4 | cut -d "," -f1)
-	REPONAME=$(cat $1 | cut -d "/" -f2)
+	REPONAME=$(echo $1 | cut -d "/" -f2)
 	REPOURL=$1
 	echo "Enter description for Repository:"; 
 	read REPODESC;
 	
+	echo $STARS 
+	echo "${REPONAME^}"
+	echo $REPOURL 
+	echo $REPODESC
 	
-	echo '''<div style="width: 600px; margin: 0 auto; padding: 10px; overflow: hidden; border: 5px rgb(158, 93, 94) dotted; border-radius:10px ">
-  
-  <div style="float: left; width: 70px; height: 80px; padding: 10px "> 
-  <a href="https://github.com/'''$REPOURL'''">{% octicon repo height:64 class:"right left" aria-label:hi fill:#ac4142 %}</a> </div>
-  
-  
-  <div style="float:left; width: auto; max-width: 470px; padding: 10px; height: 80px;-webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit;  color: rgb(205, 90, 90); font-size: 17px; font-weight: inherit; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-style: oblique; text-decoration: inherit; text-align: left;  line-height: 1.1em;   ">
-  <strong>'''$REPONAME'''</strong> 
-  <p>'''$REPODESC'''</p></div>
+	div1='''<div style="width: 84%; margin: 0 auto; padding: 10px; overflow: hidden; border: 5px rgb(158, 93, 94) dotted; border-radius:10px ">
+  <a href="https://github.com/'''; 
+	div2='''" style="text-decoration: none">
+  <!-- Code Button-->	
+  <div style="float: left; width: 8%; height: 80px; padding: 10px "> 
+  <i class="fa fa-code-fork fa-4x" aria-hidden="true"  style="color:#ac4142"></i> </div>
 
+  <!-- Star Button-->
+  <div style="float: left; width: 8%; height: 80px; margin: 0 auto ">
+  
+  <div style=" width: auto; max-width: 60%; height:35%;"> 
+  &nbsp; 
+  </div>
+  <div style="height:40%; padding:0px;">
+  <div style="width: auto; max-width: 60%; height:80%; padding:5px;"> <i class="fa fa-star " aria-hidden="true"  style="color:#ac4142"></i> </div>
+  <div style="width: auto; max-width: 60%; height:100%; padding:1px; color: rgb(35, 34, 34); font-size: 14px; font-family: Impact, Charcoal, sans-serif;  text-align: center;">''';
+
+   div3='''</div>
+  </div>
+  </div>
+ 
+  <!-- Description-->
+  <div style="float:left; width: auto; max-width: 70%; padding: 10px; height: 80px;  color: rgb(205, 90, 90); font-size: 17px;  font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; font-style: oblique; text-align: left;  line-height: 1.1em;   ">
+  <font color="#3A373B"> <strong> ''';
+
+  div4=''' </strong></font> 
+  <p>'''; 
+
+  div5='''</p></div>
+  </a> 
   <div clear:both ></div>
-</div>'''
+  </div>
+  <br> ''';  
+
+	echo $div1$REPOURL $div2 $STARS $div3 "${REPONAME^}" $div4 $REPODESC $div5;	
+	#echo $REPODESC $div
 	rm repo.data 
 }
 

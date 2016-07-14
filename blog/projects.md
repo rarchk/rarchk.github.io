@@ -5,29 +5,6 @@ banner_image:
 banner_image_alt: 
 ---
 
-<div style="width: 600px; margin: 0 auto; padding: 10px; overflow: hidden; border: 4px rgb(158, 93, 94) dotted; border-radius:10px ">
-  
-  <div style="float: left; width: 80px; height: 80px; padding: 10px "> 
-  <a href="https://github.com/rarchk/docklock"><i class="fa fa-code-fork fa-4x" aria-hidden="true"  style="color:#ac4142"></i></a> </div>
-  
-  
-  <div style="float:left; width: auto; max-width: 470px; padding: 10px; height: 80px;-webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit;  color: rgb(205, 90, 90); font-size: 17px; font-weight: inherit; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-style: oblique; text-decoration: inherit; text-align: left;  line-height: 1.1em;   ">
-  <strong>Docklock</strong> 
-  <p>  
-  In this project, I hacked docker images and made them secure by encrypting all image layers</p></div>
+<div style="width: 84%; margin: 0 auto; padding: 10px; overflow: hidden; border: 5px rgb(158, 93, 94) dotted; border-radius:10px "> <a href="https://github.com/rarchk/docklock " style="text-decoration: none"> <!-- Code Button--> <div style="float: left; width: 8%; height: 80px; padding: 10px "> <i class="fa fa-code-fork fa-4x" aria-hidden="true" style="color:#ac4142"></i> </div> <!-- Star Button--> <div style="float: left; width: 8%; height: 80px; margin: 0 auto "> <div style=" width: auto; max-width: 60%; height:35%;"> &nbsp; </div> <div style="height:40%; padding:0px;"> <div style="width: auto; max-width: 60%; height:80%; padding:5px;"> <i class="fa fa-star " aria-hidden="true" style="color:#ac4142"></i> </div> <div style="width: auto; max-width: 60%; height:100%; padding:1px; color: rgb(35, 34, 34); font-size: 14px; font-family: Impact, Charcoal, sans-serif; text-align: center;"> 9 </div> </div> </div> <!-- Description--> <div style="float:left; width: auto; max-width: 70%; padding: 10px; height: 80px; color: rgb(205, 90, 90); font-size: 17px; font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; font-style: oblique; text-align: left; line-height: 1.1em; "> <font color="#3A373B"> <strong> Docklock </strong></font> <p> For secure containers, I encrypt the layers of docker images with sha-128 and make your containers prune to malicious Vendors. </p></div> </a> <div clear:both ></div> </div> <br>
 
-  <div clear:both ></div>
-</div>
-<br>
-<div style="width: 600px; margin: 0 auto; padding: 10px; overflow: hidden; border: 5px rgb(158, 93, 94) dotted; border-radius:10px ">
-  
-  <div style="float: left; width: 70px; height: 80px; padding: 10px "> 
-  <a href="https://github.com/rarchk/rarchk.github.io"><i class="fa fa-code-fork fa-4x" aria-hidden="true"  style="color:#ac4142"></i></a> </div>
-  
-  
-  <div style="float:left; width: auto; max-width: 470px; padding: 10px; height: 80px;-webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit;  color: rgb(205, 90, 90); font-size: 17px; font-weight: inherit; font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; font-style: oblique; text-decoration: inherit; text-align: left;  line-height: 1.1em;   ">
-  <strong>rarchk/rarchk.github.io</strong> 
-  <p>My blog on my discoveries</p></div>
-
-  <div clear:both ></div>
-</div>
+<div style="width: 84%; margin: 0 auto; padding: 10px; overflow: hidden; border: 5px rgb(158, 93, 94) dotted; border-radius:10px "> <a href="https://github.com/getAppIT/appit " style="text-decoration: none"> <!-- Code Button--> <div style="float: left; width: 8%; height: 80px; padding: 10px "> <i class="fa fa-code-fork fa-4x" aria-hidden="true" style="color:#ac4142"></i> </div> <!-- Star Button--> <div style="float: left; width: 8%; height: 80px; margin: 0 auto "> <div style=" width: auto; max-width: 60%; height:35%;"> &nbsp; </div> <div style="height:40%; padding:0px;"> <div style="width: auto; max-width: 60%; height:80%; padding:5px;"> <i class="fa fa-star " aria-hidden="true" style="color:#ac4142"></i> </div> <div style="width: auto; max-width: 60%; height:100%; padding:1px; color: rgb(35, 34, 34); font-size: 14px; font-family: Impact, Charcoal, sans-serif; text-align: center;"> 0 </div> </div> </div> <!-- Description--> <div style="float:left; width: auto; max-width: 80%; padding: 10px; height: 80px; color: rgb(205, 90, 90); font-size: 17px; font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; font-style: oblique; text-align: left; line-height: 1.1em; "> <font color="#3A373B"> <strong> Appit </strong></font> <p> Git for your applications, docker to specify applications and dropbox for your application data. </p></div> </a> <div clear:both ></div> </div> <br>
