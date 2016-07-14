@@ -123,15 +123,26 @@ function init()
 
 function projects()
 {
-	#curl -i https://api.github.com/repos/$1 > repo.data
+	curl -i https://api.github.com/repos/$1 > repo.data
 	STARS=$(cat repo.data | grep stargazers_count | cut -d " " -f4 | cut -d "," -f1)
-	NAME=$(cat repo.data | grep full_name | cut -d "\"" -f4)
-	echo $NAME $STARS
-	echo ''' <div style="margin-right: 200px;">
-  <div style="float: left; width: 100%; background-color: #CCF;">{% octicon repo height:128 class:"right left" aria-label:hi %}</div>
-  <div style="float: right; width: 200px; margin-right: -200px; background-color: #FFA;">$STARS</div>
+	REPONAME=$(cat $1 | cut -d "/" -f2)
+	REPOURL=$1
+	echo "Enter description for Repository:"; 
+	read REPODESC;
+	
+	
+	echo '''<div style="width: 600px; margin: 0 auto; padding: 10px; overflow: hidden; border: 5px rgb(158, 93, 94) dotted; border-radius:10px ">
+  
+  <div style="float: left; width: 70px; height: 80px; padding: 10px "> 
+  <a href="https://github.com/'''$REPOURL'''">{% octicon repo height:64 class:"right left" aria-label:hi fill:#ac4142 %}</a> </div>
+  
+  
+  <div style="float:left; width: auto; max-width: 470px; padding: 10px; height: 80px;-webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit;  color: rgb(205, 90, 90); font-size: 17px; font-weight: inherit; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-style: oblique; text-decoration: inherit; text-align: left;  line-height: 1.1em;   ">
+  <strong>'''$REPONAME'''</strong> 
+  <p>'''$REPODESC'''</p></div>
+
   <div clear:both ></div>
-</div> '''
+</div>'''
 	rm repo.data 
 }
 
