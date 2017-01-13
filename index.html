@@ -2,101 +2,141 @@
 layout: default
 title: Home
 ---
-<div>
-	<blockquote>
-		<p><b>	We decide only on how to use the time that we were given. </b>
-		<span  style="float: right;"> <i> - J.R.R Tolkien, The Fellowship of the Ring  </i> </span>
-		</p>
-	</blockquote>
-	<br>
-	<i> And so I blog, about my discoveries, about my passion, about my thoughts and about my work.</i>
-</div>			
 
-<div >
-				<h3>
-				<div style="float: left; width:19%">
-                    &nbsp;
-                </div>
+<table>
+<tr>
+	<td bgcolor=white width=200 height=0> </td>
+	<td bgcolor=white width=200 height=0> </td>
+	<td bgcolor=white width=200 height=0> </td>
+</tr>
+<tr>
+	<td bgcolor=#F5ECCE width=200 height=30> </td>
+	<td bgcolor=#F5D0A9 width=200 height=30> </td>
+	<td bgcolor=#F5BCA9 width=200 height=30> </td>
+</tr>
+<tr>
+	<td bgcolor=white width=200 height=0> </td>
+	<td bgcolor=white width=200 height=0> </td>
+	<td bgcolor=white width=200 height=0> </td>
+</tr>
 
+<tr>
+<td bgcolor=#F5BCA9 width=200 height=200>
+<p>
+<center> A B O U T </center>
+</p>
+<p>
+<center>
+<a href="/public/data/cv.pdf"> CV</a><br>
+<a href="/blog">Blog</a><br>
+<a href="/blog/reflections">Reflections</a><br>
+<a href="/blog/projects">Projects</a><br>
+<a href="/blog/quote-project">Quotes</a>
+</center>
+</p>
+</td>
 
-				{% for home in site.author.home %}
-					{% assign iconname = home[0] %}
-					{% assign metadata = home[1] | split:'||' %}
-					<div style="float: left; width:28%">
-					<center>
-						<font size="18">
-                    	<a href="{{ metadata[0] }}">
-                        <i class="fa fa-{{ iconname }}" aria-hidden="true"></i>
-                    	</font>
-                    	<p class="outline" style="color:#6a9fb5;">
-                        {{ metadata[1] }}
-                    	</p>
-                    	</a>
-                 	</center>
-                 	</div>
-                 	{% assign current_index = current_index | plus: 1 %}
-				{% endfor %}
-                
-                <br style="clear: left;" />
-				</h3>
-			
-</div>
+<td bgcolor=#F5ECCE width=200 height=200>
+<p>
+<center>
+	<img width=200 border=0 src="/public/images/profile.jpg" alt="Ronak Kogta" name="picture_link"></a>
+</center>
+</p>
+</td>
 
-<div >
-				<h3>
-				<div style="float: left; width:19%">
-                    &nbsp;
-                </div>
+<td bgcolor=#F5D0A9 width=200 height=200>
+<p>
+<center><font size="3">
+Hi, I'm Ronak and I &#9829; distributed computing and operating systems. Here to jot down my thoughts in ether and explorations in Computer Science.   
+</center>
+ </p>
+</td>
+</tr>
+<tr>
+	<td bgcolor=red width=200 height=0> </td>
+	<td bgcolor=white width=200 height=0> </td>
+	<td bgcolor=white width=200 height=0> </td>
+</tr>
 
+<tr>
+<td bgcolor=#F5D0A9 width=200 height=200>
+<p>
+<center> B O O K M A R K S </center>
+</p>
 
-				{% for home in site.author.subhome %}
-					{% assign iconname = home[0] %}
-					{% assign metadata = home[1] | split:'||' %}
-					<div style="float: left; width:28%">
-					<center>
-						<font size="18">
-                    	<a href="{{ metadata[0] }}">
-                        <i class="fa fa-{{ iconname }}" aria-hidden="true"></i>
-                    	</font>
-                    	<p class="outline" style="color:#6a9fb5;">
-                        {{ metadata[1] }}
-                    	</p>
-                    	</a>
-                 	</center>
-                 	</div>
-                 	{% assign current_index = current_index | plus: 1 %}
-				{% endfor %}
-                
-                <br style="clear: left;" />
-				</h3>
-			
-</div>
-<div >
-				<h3>
-				<div style="float: left; width:19%">
-                    &nbsp;
-                </div>
+<p>
+<center>
+<font size=4>
+<small>
+<a href="https://www.youtube.com/watch?v=WNFf7nMIGnE"> miranda</a> -
+<a href="sprite.html">obey your thirst</a><br>
+</small>
+</font>
+</center>
+</p>
 
+</td>
 
-				{% for home in site.author.metahome %}
-					{% assign iconname = home[0] %}
-					{% assign metadata = home[1] | split:'||' %}
-					<div style="float: left; width:28%">
-					<center>
-						<font size="18">
-                    	<a href="{{ metadata[0] }}">
-                        <i class="fa fa-{{ iconname }}" aria-hidden="true"></i>
-                    	</font>
-                    	<p class="outline" style="color:#6a9fb5;">
-                        {{ metadata[1] }}
-                    	</p>
-                    	</a
-                 	</center>
-                 	</div>
-                 	{% assign current_index = current_index | plus: 1 %}
-				{% endfor %}
-                
-                <br style="clear: left;" />
-				</h3>
-			
-</div>
+<td bgcolor=#F5BCA9  width=200 height=200>
+<p>
+<center> A R C H I V E </center>
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=/blog/archive> Log of All Blogs </a> <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=/blog/tags> Sort by Tags </a> <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=/blog/categories> Sort by Categories </a> <br>
+	
+</p>
+
+</td>
+
+<td bgcolor=#F5ECCE width=200 height=200>
+<p>
+<center>F O L L O W  <br>
+ M E @
+</center>
+</p>
+<p>
+<center>
+	<a href="https://www.linkedin.com/in/ronakkogta">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </a> | 
+        <a href="https://github.com/rarchk">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a> |
+        <a href="http://stackoverflow.com/users/733761/rarchk">
+          <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+        </a> |
+        <a href="https://twitter.com/rarchk">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a> |
+        <a href="https://www.google.com/recaptcha/mailhide/d?k\x3d01CIzJycu1pq2SHk5xVmq2RQ\x3d\x3d\x26c\x3dlBe-qtR3DTUeG_jldvPx-3bZV6esWSECuGNNBsZs9eA\x3d">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a> |
+        <a href="/atom.xml">
+          <i class="fa fa-rss" aria-hidden="true"></i>
+        </a> 
+</center>        
+</p>
+</td>
+</tr>
+<tr>
+	<td bgcolor=white width=200 height=0> </td>
+	<td bgcolor=white width=200 height=0> </td>
+	<td bgcolor=white width=200 height=0> </td>
+</tr>
+<tr>
+	<td bgcolor=#F5ECCE width=200 height=30> </td>
+	<td bgcolor=#F5D0A9 width=200 height=30> </td>
+	<td bgcolor=#F5BCA9 width=200 height=30> </td>
+</tr>
+<tr>
+	<td bgcolor=white width=200 height=0> </td>
+	<td bgcolor=white width=200 height=0> </td>
+	<td bgcolor=white width=200 height=0> </td>
+</tr>
+
+</table>
+
+</center>
+

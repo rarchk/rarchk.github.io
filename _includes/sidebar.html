@@ -7,35 +7,17 @@
   <div class="sidebar-item">
     <div class="sidebar-personal-info">
       <div class="sidebar-personal-info-section">
-        <a href="{{ site.url }}">
-          <img src="{{ site.author.profile }}" title="{{ site.author.name }}" alt="{{ site.author.name }}" />
+      <center>
+      <h4>
+      <font style="Georgia" size="5">
+          <a href="{{ site.url }}">
+          A  &#955;'s Journey To    &#960;  
         </a>
+        </font>
+       </h4> 
+       </center>
       </div>
-      <div class="sidebar-personal-info-section">
-        <p>{{ site.author.description }}</p>
-      </div>
-      {% if site.author.contact %}
-      {% assign len = site.author.contact | size %}
-      {% assign current_index = 0 %}
-      <div class="sidebar-personal-info-section">
-
-        <p> <strong>Follow me @</strong>
-        <br> 
-        {% for contact in site.author.contact %}
-        {% assign iconname = contact[0] %}
-        {% if contact[0] == 'email' %}
-        {% assign iconname = 'envelope' %}
-        {% endif %}
-        <a href="{{ contact[1] }}">
-          <i class="fa fa-{{ iconname }}" aria-hidden="true"></i>
-        </a>
-        {% assign current_index = current_index | plus: 1 %}
-        {% if current_index != len %}|{% endif %}
-        {% endfor %}
-        </p>
-      </div>
-      {% endif %}
-    </div>
+     </div>
   </div>
 
   <nav class="sidebar-nav">

@@ -3,7 +3,7 @@ title: A λ's Journey To Π
 tagline: ' Suggesting finite axioms for the infinite world.'
 description: 'My personal website'
 #baseurl: "" #/lanyon" # to be used when going for sub-directory  
-url:  "http://localhost:4000"#"https://rarchk.github.io" # 
+url:  "https://rarchk.github.io" #"http://localhost:4000" # 
 logo: '/public/logo.png'
 
 # Site configurations
@@ -38,24 +38,18 @@ author:
     twitter:   https://twitter.com/rarchk
     email:     https://www.google.com/recaptcha/mailhide/d?k\x3d01CIzJycu1pq2SHk5xVmq2RQ\x3d\x3d\x26c\x3dlBe-qtR3DTUeG_jldvPx-3bZV6esWSECuGNNBsZs9eA\x3d
     rss: /atom.xml
-  home:
-    pencil-square:   /blog/ || Blog
-    institution:    /blog/reflections || Reflections
-  subhome:
-    github-alt: /blog/projects/ || Projects  
-    briefcase: /blog/work || Work
-  metahome:   
-    chevron-circle-down: /blog/bookmarks || Bookmarks
-    quote-left: /blog/quote-project || Quote Project  
   
 # Navigation (2nd level links supported)
 nav:
   Home:           
     - '/'
-  About:          
-    - '/about/'  
-  Curriculum Vitae:
-    - '/public/data/RonakKogta_CurriculumVitae.pdf'
+  Blog:
+    - /blog/
+  Reflecitons:
+    - /blog/reflections
+  Projects:
+    - /blog/projects
+
   Archive:
   - '/blog/archive'
   - { Categories: '/blog/categories/' }
