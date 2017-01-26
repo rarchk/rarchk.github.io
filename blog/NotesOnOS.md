@@ -36,7 +36,10 @@ I love operating systems and I want to write and share my understanding of it. I
 3. Effective guide to linux memory
 4. Effective guide to linux IPC mechanisms
 5. What is virtualization
-6. What are containers  
+6. What are containers
+
+#### Homework
+1. Puzzles  
 
 {% if site.disqus_short_name %}
 <div class="comments">
