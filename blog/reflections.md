@@ -20,7 +20,7 @@ banner_image_alt:
       
       <font size="4"> 
       <b>
-      <a href="{{ post.url | append: '/' | replace: '//', '/' | prepend: site.baseurl | prepend: site.url |  }}">
+      <a href="{{ post.url | append: '/' | replace: '//', '/' | prepend: site.baseurl | prepend: site.url   }}">
         {{ post.title }}
       </a>
     </b>
