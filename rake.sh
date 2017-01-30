@@ -126,6 +126,11 @@ function downloadResources()
 	cd $RARCHK_HOME_DIR/public/js
 	rm MathJax.js
 	curl https://cdn.mathjax.org/mathjax/latest/MathJax.js > MathJax.js
+	mkdir -p config 
+	curl https://cdn.mathjax.org/mathjax/latest/config/TeX-AMS_SVG.js > config/TeX-AMS_SVG.js
+	mkdir -p extensions
+	curl https://cdn.mathjax.org/mathjax/latest/extensions/MathMenu.js > extensions/MathMenu.js 
+	curl https://cdn.mathjax.org/mathjax/latest/extensions/MathZoom.js > extensions/MathZoom.js
 	rm analytics.js
 	wget https://google-analytics.com/analytics.js
 	rm count.js 
@@ -134,6 +139,12 @@ function downloadResources()
 	cd $RARCHK_HOME_DIR/public/css
 	rm font-awesome.min.css 
 	wget https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css
+
+	cd $RARCHK_HOME_DIR/fonts
+	rm *
+	wget https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/fonts/fontawesome-webfont.ttf
+	wget https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/fonts/fontawesome-webfont.woff
+	wget https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/fonts/fontawesome-webfont.woff2
 
 	cd $RARCHK_HOME_DIR 
 }
