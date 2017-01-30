@@ -121,6 +121,22 @@ function init()
 	bundle install 
 }
 
+function downloadResources()
+{
+	cd $RARCHK_HOME_DIR/public/js
+	rm MathJax.js
+	curl https://cdn.mathjax.org/mathjax/latest/MathJax.js > MathJax.js
+	rm analytics.js
+	wget https://google-analytics.com/analytics.js
+	rm count.js 
+	wget https://rarchkgithubio.disqus.com/count.js
+
+	cd $RARCHK_HOME_DIR/public/css
+	rm font-awesome.min.css 
+	wget https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css
+
+	cd $RARCHK_HOME_DIR 
+}
 function projects()
 {
 	curl -i https://api.github.com/repos/$1 > repo.data
@@ -180,5 +196,8 @@ echo ''' rake: Usage
 	new_page:	Create new_page
 	preview:	Previewing site with jekyll
 	check:		Search site and print specific deprecation warnings
-	projects:	Build projects post 
-''' 
+	projects:	Build projects post
+	downloadResources: Download prerequisite resources  
+'''
+
+export RARCHK_HOME_DIR=$PWD 
