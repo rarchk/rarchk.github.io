@@ -69,7 +69,7 @@ quotes:
 # Plugins
 mathjax: true # whether support mathjax
 google_analytics_token: #'UA-5613819-3' # leave blank if you don't want google analytics
-disqus_short_name: #'rarchkgithubio' # leave blank if you don't want disqus
+disqus_short_name: rarchkgithubio' # leave blank if you don't want disqus
 
 # posts to show at github
 future: true
