@@ -57,6 +57,9 @@ ga('create', '{{ site.google_analytics_token }}', 'auto');
 ga('send', 'pageview');
     </script>
     {% endif %}
+    
+    <link rel="stylesheet" href="{{ site.baseurl }}/public/css/main.css">
+  <link href="{{ site.baseurl }}/public/css/font-awesome.min.css" rel="stylesheet">
   </body>
   {% if site.disqus_short_name %}
   <script id="dsq-count-scr" src="//{{ site.disqus_short_name }}.disqus.com/count.js" async></script>
