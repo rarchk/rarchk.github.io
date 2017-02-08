@@ -5,8 +5,6 @@ banner_image: operatingsystems.jpg
 banner_image_alt: Operating Systems
 ---
 
-Operating Systems, From programmers perspective    
-=== 
 
 I love operating systems and I want to write and share my understanding of it. In process, I may find more amazing insights on how it works, and what are different design consideration that were taken in order to design such a marvelous piece of software. I've been inspired to write from the work of [Julia Evans](https://twitter.com/b0rk), [Remzi](http://pages.cs.wisc.edu/~remzi/OSTEP/) and my previous work as [OS TA](https://researchweb.iiit.ac.in/~ronak.kogta/ICS231) 
 
@@ -25,7 +23,7 @@ I love operating systems and I want to write and share my understanding of it. I
 
 ## Fantastic Concurrency and how to tame them ##
 1. [Concurrency Demons and where to find them](https://rarchk.github.io/systems/2017/02/08/concurrency-demons-and-where-to-find-them/)
-2. How to tame them  
+2. [Concurrency Demons and how to tame them]()  
 
 ## File systems ## 
 1. Introduction
