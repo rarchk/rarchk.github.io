@@ -16,7 +16,7 @@ title: Blog
       
     {% endif %}
       <div class="container">
-      <div class="left_side"> <span><a href="{{ BASE_PATH }}{{ post.url }}" style="text-decoration: none;">{{ post.title }}</a></span> </div><div class="right_side"> <span  style="float: right;"><u style=" border-bottom: 1px dashed #999; text-decoration:none" ><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %y" }}</time></u></span> </div>
+      <div class="left_side"><font size="4"> <span><a href="{{ BASE_PATH }}{{ post.url }}" style="text-decoration: none;">{{ post.title }}</a></span> </font></div><div class="right_side"> <span  style="float: right;"><u style=" border-bottom: 1px dashed #999; text-decoration:none" ><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %y" }}</time></u></span> </div>
       </div>
 
     {% if forloop.last %}
