@@ -23,7 +23,7 @@ I love operating systems and I want to write and share my understanding of it. I
 
 ## Fantastic Concurrency and how to tame them ##
 1. [Concurrency Demons and where to find them](https://rarchk.github.io/systems/2017/02/08/concurrency-demons-and-where-to-find-them/)
-2. [Concurrency Demons and how to tame them]()  
+2. [Concurrency Demons and how to tame them](https://rarchk.github.io/systems/2017/02/08/concurrency-demons-and-how-to-tame-them/)  
 
 ## File systems ## 
 1. Introduction
