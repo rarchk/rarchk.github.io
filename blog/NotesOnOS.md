@@ -14,26 +14,28 @@ I love operating systems and I want to write and share my understanding of it. I
 ## Table of Contents ##
 
 
-#### Understanding anatomy of a program ##
-1. How a program actually works ? 
-2. Internals of a program  
+## Understanding anatomy of a program ##
+1. How a program actually works? 
+2. Internals of a processes
 
-#### Diving into Memory sub-system
+
+## Diving into Memory sub-system ##
 1. How a process manages its memory
 2. How an operating system manages its memory
 
-#### Fantastic Concurrency and how to tame them
-1. Introducing beasts of concurrency
+## Fantastic Concurrency and how to tame them ##
+1. [Concurrency Demons and where to find them](https://rarchk.github.io/systems/2017/02/08/concurrency-demons-and-where-to-find-them/)
 2. How to tame them  
 
-#### File systems 
+## File systems ## 
 1. Introduction
 2. File system Internals  
 
-#### Appendix
+### Appendix ###
 1. State machine and multiple abstractions
-2. Effective guide to system calls
-3. Effective guide to linux memory
+2. [A brief tutorial on system calls](https://rarchk.github.io/systems/2017/01/26/a-brief-tutorial-on-system-calls/)
+3. [Understanding /proc file system](https://rarchk.github.io/systems/2016/07/07/internals-of-proc-in-linux/)
+3. [A brief tutorial on linux memory](https://rarchk.github.io/systems/2017/01/26/a-brief-tutorial-on-linux-memories/)
 4. Effective guide to linux IPC mechanisms
 5. What is virtualization
 6. What are containers
