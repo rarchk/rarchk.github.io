@@ -48,17 +48,26 @@ with open(file) as f:
 	# do something with file
 ```	  
 
-## Cognitive Principles ##
+## Follow these Design Principles ##
 - **Do similar things in similar ways** 
 	- Your code patterns should be consistent through out your code. 
 - **Keep it simple and stupid (KISS)**
-	- Modularize your code into short pieces of function that achieve one purpose 
-- **Principle of Least Astonsishment**
-	- Do not go for needless complexity in your code, use simple interfaces  
+	- Modularize your code into short pieces of function that achieve one purpose
+- **Do not repeat yourself(Dry)**
+	- Refactor your code to reduce size, and do not duplicate the code 	 
+- **Principle of Least Astonishment**
+	- Do not go for needless complexity in your code, use simple interfaces 
+- **Articulate your thoughts with the help of**
+	- pen and paper, to mark down your thought process. Could be a pseudo code or diagram.  
+	- Ask colleagues and friends for reviews.
+	- Some times it will just come to you
+- **Steal from others**
+	- Check out the good codebases like kubernetes or servo and adopt its style into yours.  	 	 
 
 ## Test and Tooling ##
-- Use linter for checking goodness of your code. 
+- Use linter for checking goodness of your code. (and may be other tools too)
 - Unit tests, and complete tests for code in your continuous integration systems.
 - More checks to qualify freshness and correctness of your code.
+- Do more and more error handling 
 
 These are just principles, but important thing is that writing good code should be a main goal of your software engineering career. Being in startups, it is sometimes hard to get this kind of code quality, as we are free to do anything. But you have to learn.  

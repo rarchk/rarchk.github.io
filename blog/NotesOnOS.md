@@ -11,10 +11,10 @@ Operating Systems, From programmers perspective
 I love operating systems and I want to write and share my understanding of it. In process, I may find more amazing insights on how it works, and what are different design consideration that were taken in order to design such a marvelous piece of software. I've been inspired to write from the work of [Julia Evans](https://twitter.com/b0rk), [Remzi](http://pages.cs.wisc.edu/~remzi/OSTEP/) and my previous work as [OS TA](https://researchweb.iiit.ac.in/~ronak.kogta/ICS231) 
 
 
-## Table of Contents
+## Table of Contents ##
 
 
-#### Understanding anatomy of a program
+#### Understanding anatomy of a program ##
 1. How a program actually works ? 
 2. Internals of a program  
 
@@ -38,8 +38,6 @@ I love operating systems and I want to write and share my understanding of it. I
 5. What is virtualization
 6. What are containers
 
-#### Homework
-1. Puzzles  
 
 {% if site.disqus_short_name %}
 <div class="comments">
