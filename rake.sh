@@ -162,41 +162,14 @@ function projects()
 	echo $REPOURL 
 	echo $REPODESC
 	
-	div1='''<div style="width: 84%; margin: 0 auto; padding: 10px; overflow: hidden; border: 5px rgb(158, 93, 94) dotted; border-radius:10px ">
-  <a href="https://github.com/'''; 
-	div2='''" style="text-decoration: none">
-  <!-- Code Button-->	
-  <div style="float: left; width: 8%; height: 80px; padding: 10px "> 
-  <i class="fa fa-code-fork fa-4x" aria-hidden="true"  style="color:#ac4142"></i> </div>
-
-  <!-- Star Button-->
-  <div style="float: left; width: 8%; height: 80px; margin: 0 auto ">
+	div1='''| <a href="https://github.com/'''; 
+	div2='''"> <font size="4"> '''
+    div3=''' </font></a>| ''';
+    div4=''' | <font size="3"> '''
+    div5=''' </font> |'''
+   
   
-  <div style=" width: auto; max-width: 60%; height:35%;"> 
-  &nbsp; 
-  </div>
-  <div style="height:40%; padding:0px;">
-  <div style="width: auto; max-width: 60%; height:80%; padding:5px;"> <i class="fa fa-star " aria-hidden="true"  style="color:#ac4142"></i> </div>
-  <div style="width: auto; max-width: 60%; height:100%; padding:1px; color: rgb(35, 34, 34); font-size: 14px; font-family: Impact, Charcoal, sans-serif;  text-align: center;">''';
-
-   div3='''</div>
-  </div>
-  </div>
- 
-  <!-- Description-->
-  <div style="float:left; width: auto; max-width: 70%; padding: 10px; height: 80px;  color: rgb(205, 90, 90); font-size: 17px;  font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; font-style: oblique; text-align: left;  line-height: 1.1em;   ">
-  <font color="#3A373B"> <strong> ''';
-
-  div4=''' </strong></font> 
-  <p>'''; 
-
-  div5='''</p></div>
-  </a> 
-  <div clear:both ></div>
-  </div>
-  <br> ''';  
-
-	echo $div1$REPOURL $div2 $STARS $div3 "${REPONAME^}" $div4 $REPODESC $div5;	
+	echo $div1$REPOURL $div2 ${REPONAME^} $div3 $STARS $div4 $REPODESC $div5;	
 	#echo $REPODESC $div
 	rm repo.data 
 }
