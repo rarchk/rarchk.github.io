@@ -47,13 +47,16 @@ nav:
     - /blog/
   Reflecitons:
     - /blog/reflections
-  Projects:
-    - /blog/projects
+  Current ME:
+    - /blog/currentme
 
   Archive:
   - '/blog/archive'
   - { Categories: '/blog/categories/' }
-  - { Tags: '/blog/tags/' }        
+  - { Tags: '/blog/tags/' }
+
+  Sitemap:
+    - /blog/sitemap.xml        
 
 
 
@@ -61,14 +64,10 @@ nav:
 tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
 
-#Quotes Project 
-quotes: 
-  Dead Poets Society: Listen, you hear it? — Carpe — hear it? — Carpe, carpe diem,
-    seize the day boys, make your lives extraordinary.
 
 # Plugins
 mathjax: true # whether support mathjax
-google_analytics_token: #'UA-5613819-3' # leave blank if you don't want google analytics
+google_analytics_token: 'UA-5613819-3' # leave blank if you don't want google analytics
 disqus_short_name: 'rarchkgithubio' # leave blank if you don't want disqus
 
 # posts to show at github
