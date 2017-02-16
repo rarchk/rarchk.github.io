@@ -10,43 +10,13 @@ banner_image_alt:
     {% capture this_month %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% capture next_month %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
-    {% if forloop.first %}
-
-      <h2 id="{{ this_month }}-ref">{{ this_month }}</h2>
-      <ul >
-    {% endif %}
     {% if post.type contains "ref" %}
-    <li>
+      <div class="container">
+      <div class="left_side"><font size="4"> <span><a href="{{ BASE_PATH }}{{ post.url }}" style="text-decoration: none;">{{ post.title }}</a></span> </font></div><div class="right_side"> <span  style="float: right;"><u style=" border-bottom: 1px dashed #999; text-decoration:none" ><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %y" }}</time></u></span> </div>
+      </div>   
       
-      <font size="4"> 
-      <b>
-      <a href="{{ post.url | append: '/' | replace: '//', '/' | prepend: site.baseurl | prepend: site.url   }}">
-        {{ post.title }}
-      </a>
-    </b>
-    
-    <span  style="float: right;"> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d" }}</time> </span> 
-  
-    {% if post.tags %}
-    <br> 
-    {% for tag in post.tags %}
-    <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
-    {% endfor %}
     {% endif %}
-    <br>
-    <br>
-    </font>
-    </li>
-    {% endif %}
-    {% if forloop.last %}
-      </ul>
-    {% else %}
-        {% if this_month != next_month %}
-          </ul>
-          <h2 id="{{ next_month }}-ref">{{next_month}}</h2>
-          <ul >
-        {% endif %}
-    {% endif %}
+ 
 {% endfor %}
 </article>
 

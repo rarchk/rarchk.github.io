@@ -1,0 +1,103 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<urlset
+  xmlns = "http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xhtml = "http://www.w3.org/1999/xhtml"
+  xmlns:image = "http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video = "http://www.google.com/schemas/sitemap-video/1.1"
+  xsi:schemaLocation = "
+        http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+	
+<url>
+	<loc> https://rarchk.github.io </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/blog/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/blog/reflections/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/blog/projects/ </loc>
+	  <image:image>
+		<image:caption>404</image:caption>
+		<image:loc> https://rarchk.github.io/public/404.jpg </image:loc>
+	 </image:image>
+</url>
+<url>
+	<loc> https://rarchk.github.io/blog/archive/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/blog/categories/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/blog/tags/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/public/data/cv.pdf </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/blog/currentme/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/blog/quote-project/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/blog/NotesOnOS/ </loc>
+	  <image:image>
+		<image:caption>Operating Systems</image:caption>
+		<image:loc> https://rarchk.github.io/public/images/operatingsystems.jpg </image:loc>
+	 </image:image>
+</url>
+<url>
+	<loc> https://rarchk.github.io/systems/2017/02/09/my-first-site-performance-report/ </loc>
+	  <image:image>
+		<image:caption>Old masthead</image:caption>
+		<image:loc> https://rarchk.github.io/public/logo.png </image:loc>
+	 </image:image>
+	  <image:image>
+		<image:caption>My site performance</image:caption>
+		<image:loc> https://rarchk.github.io/public/images/SiteAfterUpdate.png </image:loc>
+	 </image:image>
+</url>
+<url>
+	<loc> https://rarchk.github.io/systems/2017/02/08/concurrency-demons-and-where-to-find-them/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/systems/2017/02/08/concurrency-demons-and-how-to-tame-them/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/systems/programming/2017/02/07/how-to-write-a-production-quality-code/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/systems/2017/01/26/small-linux-experiments/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/systems/2017/01/26/latency-numbers-that-every-software-programmer-should-know/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/systems/2017/01/26/a-brief-tutorial-on-system-calls/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/systems/2017/01/26/a-brief-tutorial-on-linux-memories/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/software%20process/2016/07/07/understanding-a-little-bit-of-technical-debt/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/systems/2016/07/07/internals-of-proc-in-linux/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/development/2016/07/07/internals-of-linux-container/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/development/kernel/2016/07/07/few-nuggets-for-kernel-developers/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/development/2016/07/07/cuda-architecture-at-glance/ </loc>
+</url>
+<url>
+	<loc> https://rarchk.github.io/development/2016/07/07/a-brief-history-of-contain-yourself/ </loc>
+</url>
+</urlset>
