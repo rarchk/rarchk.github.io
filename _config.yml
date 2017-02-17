@@ -45,10 +45,10 @@ nav:
     - '/'
   Blog:
     - /blog/
+  Work:
+    - /blog/work
   Reflecitons:
     - /blog/reflections
-  Current ME:
-    - /blog/currentme
 
   Archive:
   - '/blog/archive'
