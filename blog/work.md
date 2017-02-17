@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Current Me 
+title: Work 
 banner_image: 
 banner_image_alt: 
 ---
