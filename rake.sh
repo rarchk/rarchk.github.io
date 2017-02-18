@@ -3,11 +3,20 @@
 
 # bash application to maintain your jekyll website
 
-# Create new_post 
 function new_post()
 {
+	create_post "_posts"
+}
+
+function draft_post()
+{
+	create_post "_drafts"
+}
+
+function create_post()
+{
 	imagedir="public/images"
-	postdir="_posts"
+	postdir=$1
 
 	echo "Enter title of the post: "; 
 	read title;
@@ -60,6 +69,7 @@ function new_post()
 	fi
     echo "---" >> "$postdir/$filename"; 
 }
+
 
 # Create new_page
 function new_page()
@@ -177,6 +187,7 @@ function projects()
 echo ''' rake: Usage
 	init:		Install prerequisties
 	new_post:	Create new_post
+	draft_post:	Create draft_post
 	new_page:	Create new_page
 	preview:	Previewing site with jekyll
 	check:		Search site and print specific deprecation warnings

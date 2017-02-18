@@ -2,8 +2,8 @@
 layout: post
 title: Understanding a little bit of Technical Debt
 type: blog
-tags: [software engineering,thoughts]
-categories: [Software Process]
+tags: [software engineering]
+categories: [design,software]
 ---
 Universe is expanding, and so is your software. But unlike Universe which is gunning for more entropy/disorder, in software, we always wish to have an order of things. Alas, in reality, our decisions whether it may seem reasonable at the time comes up with their little loads, and little by little, this load adds up as debt. Official jargon for this phenomena is referred as **technical debt**.
 

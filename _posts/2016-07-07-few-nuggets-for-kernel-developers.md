@@ -2,8 +2,8 @@
 layout: post
 title: Few nuggets for Kernel Developers
 type: blog
-tags: [kernel,linux,tips]
-categories: [development,kernel]
+tags: [kernel,linux]
+categories: [systems]
 ---
 Kernel Development Guidelines
 ==============================

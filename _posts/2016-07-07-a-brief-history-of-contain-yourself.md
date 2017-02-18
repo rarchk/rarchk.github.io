@@ -1,9 +1,9 @@
 ---
 layout: post
-title: A Brief History of "Contain Yourself"
+title: A Brief history of Containers 
 type: blog
-tags: [linux,containers,solaris zones,bsd jails]
-categories: [development]
+tags: [linux,containers,docker]
+categories: [systems]
 ---
 Container is group of processes contained in isolated environment, which can run on native host OS.
 
