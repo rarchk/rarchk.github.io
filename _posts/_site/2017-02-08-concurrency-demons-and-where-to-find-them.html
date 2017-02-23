@@ -1,0 +1,92 @@
+<p>The term <em>concurrency</em> can be traced back to famous paper, <strong>“Communicating Sequential Processes”</strong> by <em>Tony Hoare</em>, 1978.</p>
+
+<blockquote>
+  <p>A program is a parallel composition of processes that have no shared state; the processes communicate and synchronize using channels</p>
+</blockquote>
+
+<p>In current world, <strong>Concurrency is way in which multiple resources can be interleaved or co-operate together without causing any conflicts.</strong>These resources can be multiple threads trying to write into a file, or one process handling multiple files simultaneously. Basic mechanisms by, which they can co-ordinate are</p>
+
+<ul>
+  <li>Operating on the shared state</li>
+  <li>Communicate via messages (Actors)</li>
+  <li>Software Transactional Memory (If yes, then commit all the way through, otherwise reject)</li>
+  <li>Data flow concurrency</li>
+  <li>Events and triggers</li>
+</ul>
+
+<p>However, writing a concurrent program is hard, and every method comes up with a limitation of its own. Before we dive into individual methods, it is important to know the general nature of issues that come while writing such a programs.</p>
+
+<h2 id="race-conditions">1. Race Conditions</h2>
+<p>When different actors operates simultaneously on a state or a variable and are allowed to change and modify it. Following problems may emerge.</p>
+
+<ul>
+  <li><em>Order Violation</em> (Way in which actors operate cannot be deterministic and may lead to different results every time they run)</li>
+  <li><em>Atomicity Violation</em> (Way in which resource are handled by operators is also not deterministic )</li>
+</ul>
+
+<h3 id="solution"><em>Solution</em></h3>
+<p><em>Serialized Access</em> is one of the proposed solution for this problem.</p>
+
+<ul>
+  <li>If multiple actors are acting up on a resource, then access to that resource must be serialized. <em>(Linearizability)</em></li>
+  <li>Each actor at some point should get access to this resource while no body else can access it. <em>(Mutual Exclusion)</em></li>
+</ul>
+
+<p>There are bunch of ways in which this can be solved:</p>
+
+<ul>
+  <li>Locking the piece of code, also called as critical section of the code, and let actors work on it by asking for locks. (pthreads in C)</li>
+  <li>Messages are another way, where actor does not share anything with each other and talks in term of messages. (Erlang processes)</li>
+  <li>Atomic instructions, where simultaneous actor requests for a change, but change happens in one lock step. So thereby making it thread safe feature.</li>
+</ul>
+
+<h2 id="deadlocks">2. Deadlocks</h2>
+<p><em>This situation arises when a process request for resource which is acquired by another resource, meanwhile it does not release the resources that it already acquired leading to the state of deadlock.</em></p>
+
+<p><strong>A deadlock situation can arise only if all of the following conditions hold simultaneously in a system</strong></p>
+
+<ul>
+  <li>A process has an access to a mutual exclusive resource</li>
+  <li>A process is allowed to hold some resources and wait for others.</li>
+  <li>OS cannot preempt resources that have been acquired by a process.</li>
+  <li>Process A is waiting for a resource that is held by process B, meanwhile process B is waiting for process A to release the resource. (Circular Wait)</li>
+</ul>
+
+<h3 id="methods"><strong>Methods</strong></h3>
+<ul>
+  <li><strong>Deadlock Prevention Algorithms</strong> (idea is to break one of the above conditions)
+    <ul>
+      <li>partial ordering or ordering (breaking the Circular wait)</li>
+      <li>Acquire all locks all at once (breaking the Hold and Wait)</li>
+      <li>TryLock (Preemption) (removes deadlock but live-lock can still happen)</li>
+      <li>Lock free instruction with atomic updates (breaking Mutual Exclusion)</li>
+    </ul>
+  </li>
+  <li><strong>Deadlock Avoidance Algorithms</strong> (awareness of a global state is required)
+    <ul>
+      <li>Scheduling (A scheduler can know lock patterns, but you have to know beforehand)</li>
+    </ul>
+  </li>
+  <li><strong>Deadlock Detection Algorithms</strong>
+    <ul>
+      <li>Periodically OS may run a deadlock detection algorithm and improvise the deadlock recovery methods</li>
+      <li>OS may create a resource allocation graphs, and check for deadlocks, and preempt.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="classic-dining-philosophers-problem"><strong>Classic Dining Philosophers Problem</strong></h4>
+<p>Big Mom had 4 sons, and they all became philosophers. 4 Philosophers kids are sitting on a round table to eat, with one fork lying in between them. But true to their nature,
+they can chose to think and dine. But Big Mom was fed up with this behavior and imposed a condition on dining
+- A philosopher kid can only eat when he picks both forks lying beside his left and right.  <br />
+- Philosopher Kids do not contact with each other, their actions are irrespective and anybody can pick fork anytime.</p>
+
+<h4 id="solutions"><strong>Solutions</strong></h4>
+<ul>
+  <li>pick left fork, and check for right fork, if not available release left fork</li>
+  <li>arbitrator lock</li>
+  <li>partial ordering</li>
+  <li>actor models</li>
+  <li>clean/dirty forks</li>
+  <li>leaving the table</li>
+</ul>

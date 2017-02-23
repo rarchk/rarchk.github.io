@@ -1,0 +1,91 @@
+<p>From perspective of data-structures, a process is nothing but a very well-thought data-structure which kernel uses in
+storing all details of that process. Just like, in data structure, we use <em>malloc, calloc or realloc</em>, kernel manages and allocates memory via mapping it to real memory resource, be it main memory or swap.</p>
+
+<h3 id="memory-mapping-hierarchy">Memory Mapping Hierarchy</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>Simple Program
+├─ malloc(...) [In Programmer land]
+  ├
+  ├ 
+  └─ mmap(...) [In User land]
+    ├
+    ├
+    └── VMA (Virtual Memory Area) [In Kernel land]
+		├
+		├ RAM 
+		├ Flash Storage
+		├ Disks
+		├ NFS
+		└──	Other Storage options... [In Physical land]
+</code></pre>
+</div>
+
+<h3 id="virtual-memory">Virtual memory</h3>
+<ul>
+  <li>every process has its own virtual address space, which spans from 0 to 2^32-1, in 32 bit systems</li>
+  <li>It is managed by mmu using d.s like pagetables which maps virtual address range to process related info.</li>
+</ul>
+
+<h3 id="memory-mapping">Memory mapping</h3>
+<ul>
+  <li>set of page table entries, describing the properties of a consecutive virtual address range.</li>
+  <li>Each memory mapping has a start address and length, permissions and associated resources (physical pages, swap pages, file contents, and so on).</li>
+  <li>Creating new memory mappings allocates virtual memory, but not physical memory.</li>
+  <li>Memory mappings cannot overlap.</li>
+  <li>Virtual address ranges for which there is current memory mapping are said to be “unmapped”, and attempts
+to access them generate a page fault which cannot be handled.  The page fault handler sends a Segmentation
+Violation signal (SIGSEGV) to the program on any access to unmapped addresses.</li>
+  <li>memory mapping can be anonymous, file backed, device backed, shared, or copy on write.</li>
+</ul>
+
+<h4 id="note">Note:</h4>
+<p>Linux intentionally leaves the first few kilobytes of each process’s virtual address space
+unmapped, so that attempts to dereference null pointers generate an unhandled page
+fault resulting in an immediate SIGSEGV, killing the process.</p>
+
+<h3 id="anonymous-mapping">Anonymous mapping</h3>
+<ul>
+  <li>this is how malloc works, and uses stack and heap to achieve allocation</li>
+  <li>initially, only vm is allocated, and each new page is (COW) mapped to zero page(maintained by OS).</li>
+  <li>so any reference will read zero only.</li>
+  <li>Attempts to write to the page trigger the normal (COW) mechanism in the page fault handler, allocating
+fresh memory only when needed to allow the write to proceed.</li>
+  <li>“dirtying” anonymous pages allocates physical memory, the actual allocation call only allocates virtual memory.</li>
+</ul>
+
+<h3 id="allocation-of--physical-memory">Allocation of  physical memory</h3>
+<ul>
+  <li>The Linux kernel uses lazy (on-demand) allocation of physical pages.</li>
+  <li>Memory mappings generally start out with allocating vm, but the actual memory is allocated later by the
+page fault handler.</li>
+  <li>Virtual pages with no associated physical page will have the read, write, and execute bits disabled in their
+page table entries. This causes any access to that address to generate a page fault, interrupting the
+program and calling the page fault handler.</li>
+</ul>
+
+<h3 id="file-backed-mapping">File backed mapping</h3>
+<ul>
+  <li>mirror the contents of an existing file.</li>
+  <li>When page faults attach new physical pages to such a mapping, the contents of those pages is initialized by reading
+the contents of the file being mapped, at the appropriate offset for that page.</li>
+  <li>These physical pages are usually shared via page caching, which kernel does at the time of read.</li>
+  <li>Writes to file mappings created with the MAP_SHARED flag update the page cache pages, making the updated file contents
+immediately visible to other processes using the file, and eventually the cache pages will be flushed to disk updating
+the on-disk copy of the file.</li>
+  <li>Writes to file mappings created with the MAP_PRIVATE flag perform a copy on write, allocating a new local copy of the 
+page to store the changes.  These changes are not made visible to other processes, and do not update the on-disk copy of the file.</li>
+</ul>
+
+<h3 id="translation-lookaside-buffer-tlb">Translation Lookaside Buffer (TLB)</h3>
+<ul>
+  <li>Fixed size array containing mapping of virtual address of recently used pages to their physical address.</li>
+</ul>
+
+<h4 id="notes">Notes</h4>
+<ul>
+  <li>Physical memory addresses are unique in the system, virtual memory addresses are unique per-process.</li>
+  <li>Only the kernel uses physical memory addresses directly.  Userspace programs exclusively use virtual
+addresses.</li>
+  <li>lazy allocation, swapping, file mapping,  copy on write, shared memory,
+defragmentation etc. are implemented using virtual memory</li>
+</ul>
+

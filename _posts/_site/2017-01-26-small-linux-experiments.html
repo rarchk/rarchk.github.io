@@ -1,0 +1,43 @@
+<h2 id="deadlock-visualisation-using-strace">Deadlock visualisation using strace</h2>
+<div class="highlighter-rouge"><pre class="highlight"><code>open two bash terminals 
+run strace on one bash and on another bash run strace for first
+both will be showing waitpid
+</code></pre>
+</div>
+
+<h2 id="experiments-with-fork-bomb">Experiments with fork bomb</h2>
+<div class="language-c highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
+<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="n">fork</span><span class="p">();</span>
+<span class="k">return</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+ <span class="p">}</span>
+</code></pre>
+</div>
+<ul>
+  <li>What are different ways in which you can limit the fork bomb?</li>
+  <li>How pid’s are allocated during fork bomb ?</li>
+  <li>Check out the strace of a fork bomb program ?</li>
+</ul>
+
+<h2 id="program-and-memory-access-patterns">Program and memory access patterns</h2>
+<p><strong>Which will work, which will not and why?</strong></p>
+
+<div class="language-c highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+   <span class="kt">char</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>
+   <span class="n">p</span><span class="o">=</span><span class="s">"abc"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">char</span> <span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="s">"a"</span><span class="p">;</span>
+	<span class="n">strcat</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="s">"bc"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">char</span> <span class="o">*</span><span class="n">p</span><span class="o">=</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span><span class="p">);</span>
+	<span class="n">strcpy</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="s">"hello!"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+

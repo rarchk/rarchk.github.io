@@ -1,0 +1,46 @@
+<p>Container is group of processes contained in isolated environment, which can run on native host OS.</p>
+
+<p>It provides different level of virtualization than KVM,Xen etc., which tries to simulate whole operating system environment. Containers are also much more faster than previous virutalization methods, as it runs on host OS. Containers are good for life, and is currently topic of great interest.</p>
+
+<h3 id="brief-history">Brief History</h3>
+<p>The idea of containers is not new, in fact cgroups and namespace were in linux kernel since 2006. We were already using chroot and BSD jails etc. to virutalize our operations  in native space.</p>
+
+<p>But it was <em>Docker</em> that made container much of a jargon on today’s nerd lingua franca.</p>
+
+<h3 id="lxc">LXC</h3>
+<ol>
+  <li>Uses cgroups and namespace to provide net,cpu,mem,fs, deivce isolation</li>
+  <li>Very basic api, been there for quite a while.</li>
+</ol>
+
+<h3 id="docker">Docker</h3>
+<ol>
+  <li>Uses LXC, but integrates it with AUFS to create an image form of containment.</li>
+  <li>Provides tools to manage life-cycle of containers.</li>
+  <li>A detailed overview on <a href="http://www.slideshare.net/rajdeep/docker-architecturev2">Docker Architecture</a></li>
+</ol>
+
+<h3 id="others">Others</h3>
+<ol>
+  <li>Warden
+    <ul>
+      <li>Uses LXC and is used in CloudFoundry Framework</li>
+      <li>Each container managed by warden daemon.</li>
+      <li>overlay FS as filesystem</li>
+    </ul>
+  </li>
+  <li>OpenVZ
+    <ul>
+      <li>Modified kernel to support container features.</li>
+      <li>Provides tool to maintain life-cycle of containers</li>
+      <li>Interesting resource management <em>{bean counters,fair share CPU}</em>.</li>
+    </ul>
+  </li>
+  <li>Google lmctfy
+    <ul>
+      <li>Google re-created api to bypass semantics of cgroups.</li>
+      <li>Allows intent based configuration</li>
+      <li>Improves resource sharing and provides performance guarantees</li>
+    </ul>
+  </li>
+</ol>

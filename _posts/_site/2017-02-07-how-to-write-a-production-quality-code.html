@@ -1,0 +1,87 @@
+<p>Recently, I got to know some limitations in my coding style. Even though, <em>as a developer</em>,  I wrote an optimized code with most of the edge cases covered, the question was whether it could be read or may be extended by another programmer/ developer.</p>
+
+<p>Well, in my case, that another programmer would have slight difficulty. So I asked my friends to review my code, and they gave me some pointers.</p>
+
+<h2 id="read-parameters-from-a-configuration-file-or-environment-variables-every-time-you-can">Read parameters from a configuration file or environment variables, every time you can</h2>
+<p>Hard coding is bad in production code, as it makes hard to grasp the details of that attribute. If things are all in a place, changing configuration settings or understanding context is much easier. Below code is an example of hard coded operations on the strings and file type it may represent. Even though it is commented, an outside programmer might not know what is link and might get confused. It is better to define permissible file types in the configuration file and let you code work through.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># checking file types links and adding '/' in the end for html links</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">link</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">'pdf'</span><span class="p">))</span><span class="o">&gt;</span><span class="mi">1</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">link</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">'ppt'</span><span class="p">))</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">):</span>
+	<span class="n">a</span> <span class="o">=</span> <span class="s">'Do nothing'</span>		
+<span class="k">elif</span><span class="p">(</span><span class="n">link</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">!=</span><span class="s">"/"</span><span class="p">):</span>
+	<span class="n">link</span> <span class="o">=</span> <span class="n">link</span><span class="o">+</span><span class="s">"/"</span>
+
+</code></pre>
+</div>
+
+<h2 id="emphasis-on-code-re-use-do-not-try-to-reinvent-the-wheel">Emphasis on code re-use. Do not try to reinvent the wheel</h2>
+<p><strong>“I’m a developer and I should build it from scratch.”</strong>, is not a good way build robust systems. Code Re-use, Modularity and white spaces are things that a developer should focus on while writing a correct and optimized code.</p>
+
+<p>Using a battle tested and a mature piece of software component will give you much predictable results than writing your code from scratch.</p>
+
+<p>In below example, I thought it would be cool to show off my regular expression skills, but it took me a lot longer to get through this stage, and even after that I did not had all edge cases covered. If I had used lxm, or BeautifulSoup to parse, then I could focus on core parts of my application</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># import bs4,lxml</span>
+<span class="kn">import</span> <span class="nn">re</span>
+</code></pre>
+</div>
+
+<h2 id="using-style-guides-and-descriptive-variables">Using style guides and descriptive variables</h2>
+<p>Every language has its own style guide, which is marked for clear readability and understanding. There are always good patterns and bad patterns in any language. You should chose patterns with a bit of safety in it. Using descriptive variables will make it more readable.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># OK pattern</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"helloWorld"</span><span class="p">,</span><span class="n">r</span><span class="p">);</span> 
+<span class="c"># do something with file </span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c"># A little bit safe pattern</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+	<span class="c"># do something with file</span>
+</code></pre>
+</div>
+
+<h2 id="follow-these-design-principles">Follow these Design Principles</h2>
+<ul>
+  <li><strong>Do similar things in similar ways</strong>
+    <ul>
+      <li>Your code patterns should be consistent through out your code.</li>
+    </ul>
+  </li>
+  <li><strong>Keep it simple and stupid (KISS)</strong>
+    <ul>
+      <li>Modularize your code into short pieces of function that achieve one purpose</li>
+    </ul>
+  </li>
+  <li><strong>Do not repeat yourself(Dry)</strong>
+    <ul>
+      <li>Refactor your code to reduce size, and do not duplicate the code</li>
+    </ul>
+  </li>
+  <li><strong>Principle of Least Astonishment</strong>
+    <ul>
+      <li>Do not go for needless complexity in your code, use simple interfaces</li>
+    </ul>
+  </li>
+  <li><strong>Articulate your thoughts with the help of</strong>
+    <ul>
+      <li>pen and paper, to mark down your thought process. Could be a pseudo code or diagram.</li>
+      <li>Ask colleagues and friends for reviews.</li>
+      <li>Some times it will just come to you</li>
+    </ul>
+  </li>
+  <li><strong>Steal from others</strong>
+    <ul>
+      <li>Check out the good codebases like kubernetes or servo and adopt its style into yours.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="test-and-tooling">Test and Tooling</h2>
+<ul>
+  <li>Use linter for checking goodness of your code. (and may be other tools too)</li>
+  <li>Unit tests, and complete tests for code in your continuous integration systems.</li>
+  <li>More checks to qualify freshness and correctness of your code.</li>
+  <li>Do more and more error handling</li>
+</ul>
+
+<p>These are just principles, but important thing is that writing good code should be a main goal of your software engineering career. Being in startups, it is sometimes hard to get this kind of code quality, as we are free to do anything. But you have to learn.</p>
