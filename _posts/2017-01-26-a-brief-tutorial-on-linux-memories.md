@@ -2,7 +2,7 @@
 layout: post
 title: A Brief Tutorial on Linux Memories
 type: blog
-tags: [linux,virtual memory,operating systems]
+tags: [linux,virtual memory]
 categories: [systems]
 ---
 From perspective of data-structures, a process is nothing but a very well-thought data-structure which kernel uses in

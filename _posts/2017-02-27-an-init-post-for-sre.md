@@ -45,10 +45,9 @@ Well, there are different approaches to become good engineer, and you should fol
 1. [Log: What Every software engineer should know about real time data](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying)
 2. [How linux networking stack receives data](https://blog.packagecloud.io/eng/2016/06/22/monitoring-tuning-linux-networking-stack-receiving-data/)
 3. [How linux networking stack sends data](https://blog.packagecloud.io/eng/2017/02/06/monitoring-tuning-linux-networking-stack-sending-data/)
+4. [The secret to C10M problem](http://highscalability.com/blog/2013/5/13/the-secret-to-10-million-concurrent-connections-the-kernel-i.html)
 4. [10 Things I learned making the fastest web site](https://hackernoon.com/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7#.pzq4p31ec)
 5. [Julia Evans](http://jvns.ca/) writes great short blogs on her discovery of system things. They are fun and insightful to read.  
 6. [Brendan Gregg](http://www.brendangregg.com) is one person you should follow, if you like to know about performance of your system components. 
 7. [High Scalability](http://highscalability.com/) is a great blog on systems. Make it must in your reading list.
 
-#### My Comment
-I have just started to learn. It has been fun till now. I hope adventure continues.  

@@ -1,0 +1,46 @@
+\documentclass[tikz]{standalone}
+% Custom packages 
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usetikzlibrary{trees}
+
+% Starting drawing 
+\title{Tikz Standalone}
+\begin{document}
+\tikzstyle{every node}=[thick,anchor=west, rounded corners, font={\scriptsize\ttfamily}, inner sep=2.5pt]
+\tikzstyle{selected}=[draw=blue,fill=blue!10]
+\tikzstyle{root}=[selected, fill=blue!30]
+\tikzstyle{desc}=[ color=red!70]
+
+\begin{tikzpicture}[
+	scale=.9,
+	grow via three points={one child at (0.5,-0.65) and
+		two children at (0.5,-0.65) and (0.5,-1.1)},
+		edge from parent path={(\tikzparentnode.south) |-(\tikzchildnode.west)}]
+		\node [root] {/proc}
+		child { node [selected] {pid}
+			child { node [desc]  {Keeps track of per-process resources}}
+			child { node  {fd}}
+			child { node  {maps}}
+			child { node {stat, statm, status}}
+		}
+child { node at (0,-2) [selected] {net}
+	child { node  [desc]{Tracks system-wide network information}} 
+	child { node  {arp,tcp,udp,igmp, sockstat, unix}}
+	child { node  {netstat, iptables, route}}
+	child { node {dev,wireless}}
+}
+child { node at (0,-4) [selected] {sys}
+	child { node  [desc]{Keeps system wide resource configs}}
+	child { node [selected] {kernel}
+		child {node {pid\_max,thread-max}}
+	}
+	child { node at (0,-0.5)[selected] {net}
+		child {node {\dots}}
+	}
+	child { node at (0,-1)[selected] {fs}}
+}  
+child { node at (0,-7) {cpuinfo,meminfo,cgroups}}
+child { node at (0,-7.1) {locks,buddyinfo,devices}};
+\end{tikzpicture}
+\end{document}
