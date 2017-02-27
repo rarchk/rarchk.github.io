@@ -116,9 +116,9 @@ function new_page()
     echo "---" >> "$pagedir/$filename"; 
 }
 
-function  preview()
+function  site_preview()
 {
-	bundle exec jekyll serve --host 0.0.0.0 --watch;
+	bundle exec jekyll serve --host 0.0.0.0 --drafts --watch;
 }
 
 function check()
@@ -131,7 +131,7 @@ function init()
 	bundle install 
 }
 
-function convertImage()
+function tikzconvert()
 {
 	FileName=$(echo $1 | cut -d '.' -f1 | rev | cut -d '/' -f1 | rev);
 	 
@@ -163,15 +163,15 @@ function projects()
 	rm repo.data 
 }
 
-echo ''' rake: Usage
-	init:		Install prerequisties
-	new_post:	Create new_post
-	draft_post:	Create draft_post
-	new_page:	Create new_page
-	preview:	Previewing site with jekyll
-	check:		Search site and print specific deprecation warnings
-	projects:	Build projects post
-	downloadResources: Download prerequisite resources  
+echo ''' siteTools: Usage
+	init:			Install jekyll prerequisties
+	new_post:		Create new_post
+	draft_post:		Create draft_post
+	new_page:		Create new_page
+	site_preview:		Previewing site with jekyll
+	check:			Search site and print specific deprecation warnings
+	projects:		Build projects post
+	tikzconvert:		Convert tikz pdf files to png   
 '''
 
 export RARCHK_HOME_DIR=$PWD 
