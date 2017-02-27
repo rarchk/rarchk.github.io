@@ -2,8 +2,8 @@
 layout: post
 title: CUDA Architecture at glance
 type: blog
-tags: [cuda,gpgpu,programming,memory]
-categories: [architecture]
+tags: [cuda,gpgpu,architecture]
+categories: [systems]
 ---
 
 ## Abstract overview

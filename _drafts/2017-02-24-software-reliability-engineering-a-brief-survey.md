@@ -40,7 +40,9 @@ categories: [systems]
 	- Memcache, Varnish
 	- Revese Proxying and Proxying   
 
-- CAP/ACID/BASE 
+- CAP 
+- ACID (Atomicity,Consistency,Isolation,Durability)
+- BASE (Basically Available, Soft state  Eventually consistent) 
 - Replication and Sharding 
 - Postmortem analysis 
 - Performance analysis 
@@ -162,8 +164,14 @@ Interview
 1. Technical Interview - 45 min
 
 	- Abstraction & Design
+		- inheritance, polymorphism, encapsulation 
 	- Algorithms & Data Structures
 	- Software Engineering
+		- polyglot 
+		- extreme programming 
+		- pair programming 
+		- models
+		- scrum  
 
 2. Technical Interview - 45 min
 
@@ -187,4 +195,12 @@ Interview
 	- Goals
 	- Feedback
 
-5. 	
+
+## 10M concurrent connections 
+- Don’t let the kernel do all the heavy lifting. Take packet handling, memory management, and processor scheduling out of the kernel and put it into the application, where it can be done efficiently. Let Linux handle the control plane and let the the application handle the data plane.
+
+- Following applications might need 10M connections (IDS/IPS, DNS root server, TOR node, Nmap of Internet, video streaming, banking, Carrier NAT, Voip PBX, load balancer, web cache, firewall, email receive, spam filtering)
+
+- packet scalability, multicore scalability, memory scalability 
+-
+
