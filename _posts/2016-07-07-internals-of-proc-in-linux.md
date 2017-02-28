@@ -25,11 +25,6 @@ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
 ![proc tree map](https://rarchk.github.io/public/images/proc.png){: width="70%" height="auto"}
 
 
-
-![proc tree map](../../../../../proc.svg){: width="70%" height="auto"}
-
-<img src="/proc.svg"/>
-
 1. */proc/pid* represents per process resources statistics. It may give you list of file descriptors pointing to files or sockets, opened by this process. 
 2. */proc/net* is a virtual place for everything related to network in your running operating system.
 3. */proc/sys* is place where you can set or view typical limitations of your systems resources. Like, maximum number of pids, size of pages etc. 
