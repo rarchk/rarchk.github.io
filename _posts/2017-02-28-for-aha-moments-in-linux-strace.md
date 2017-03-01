@@ -65,7 +65,7 @@ Time in above is 5x more than our first command. Now for second observation, it 
 100.00    0.016020                   950        52 total
 ```
 
-#### firefox opening a [static page](https://researchweb.iiit.ac.in/~/ronak.kogta/ICS231) and doing simple browsing  
+#### firefox opening a [static page](https://researchweb.iiit.ac.in/~ronak.kogta) and doing simple browsing  
 
 ```
 % time     seconds  usecs/call     calls    errors syscall

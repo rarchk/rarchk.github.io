@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Brief Tutorial on Linux Memories
-type: blog
+type: os
 tags: [linux,virtual memory]
 categories: [systems]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Small Linux Experiments
-type: blog
+type: os
 tags: [linux,experiments]
 categories: [systems]
 ---

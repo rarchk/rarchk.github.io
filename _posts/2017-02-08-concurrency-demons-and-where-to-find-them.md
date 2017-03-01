@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Concurrency demons and where to find them
-type: blog
+type: os
 tags: [operating systems,concurrency]
 categories: [systems]
 ---

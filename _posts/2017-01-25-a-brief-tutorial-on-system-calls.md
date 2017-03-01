@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Brief Tutorial on System Calls
-type: blog
+type: os
 tags: [linux,operating systems,system call]
 categories: [systems]
 ---

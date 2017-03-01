@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Internals of /proc in linux
-type: blog
+type: os
 tags: [linux,internals]
 categories: [systems]
 ---
