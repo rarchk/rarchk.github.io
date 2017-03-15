@@ -1,10 +1,19 @@
-# Codinfox-Lanyon
+# rarchk.github.io
 
-This is a jekyll template based on [Lanyon](https://github.com/poole/lanyon). See a live demo [here](http://codinfox.github.io).
+This is my personal website, where I share my thoughts, experiments and other literary works. It has been fun designing this website bit by bit.
 
-**If you like this project, PLEASE give it a star.**
+Still not used to many frontend stuff,  
 
-Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+## Usage 
+```bash
+source site_tools.sh 
+new_post # Creates a new post 
+new_page # Creates a new page 
+```
+## Acknowledgements 
+This is a jekyll template based on [Lanyon](https://github.com/poole/lanyon). 
+
+*Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.*
 
 All the configurations are inside either `_config.yml` or `_config.scss`. The options are fairly straightforward. 
 
@@ -15,14 +24,6 @@ The theme supports:
 3. Integration of FontAwesome, MathJax, Disqus and Google Analytics
 4. and numerous improvements over original Lanyon
 
-# Rake.sh 
-```bash
-source rake.sh 
-new_post # Creates a new post 
-new_page # Creates a new page 
-```
 ## License
-
 Open sourced under the [MIT license](LICENSE.md).
 
-<3

@@ -55,7 +55,9 @@ nav:
   - { Categories: '/blog/categories/' }
   - { Tags: '/blog/tags/' }
 
-  Sitemap:
+  Github Issues:
+    - https://github.com/rarchk/rarchk.github.io/issues/new
+  Site Map v1.0.0:
     - /blog/sitemap.xml        
 
 
