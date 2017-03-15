@@ -25,11 +25,11 @@ But none the less, I would like to try this approach for website development. Yo
 <small><b>P.S: </b>I am also using disqus comments, because it does not defy a lot of usability</small>
 
 ## 3. Gists, Indexes and Awesome-Awesome                 
-I've not written a lot of programming gists, but they are excellent tools to showcase smaller work. I've recently been following this [Pocket](https://getpocket.com) alternative approach to maintaining interesting things that you see,  also called as [Awesome-Awesome](). Below are my favorite awesome indexes that I follow, and one awesome index that I'm building. 
+I've not written a lot of programming gists, but they are excellent tools to showcase smaller work. I've recently been following this [Pocket](https://getpocket.com) alternative approach to maintaining interesting things that you see,  also called as [sindresorhus/awesome](https://github.com/sindresorhus/awesome). Below are my favorite awesome indexes that I follow, and one awesome index that I'm building. 
 
-- [rarchk/Awesome](https://github.com/rarchk/awesome)
-- [rarchk/Awesome Posts](https://github.com/rarchk/awesome-posts)
+1. [rarchk/Awesome](https://github.com/rarchk/awesome)
+2. [rarchk/Awesome Posts](https://github.com/rarchk/awesome-posts)
 
 Well, a worth of network is only when it has a lot of participants. And believe me that this network is gold, and there is less clutter as you decide what content you want. Such autonomy should be revered in this age of distraction and toil. 
 
-** Well, my verdict is that I've been loving github more and more as a tool, as a social network, as a way to experiment and build my technical aspirations ** 
+**Well, my verdict is that I've been loving github more and more as a tool, as a social network, as a way to experiment and build my technical aspirations** 

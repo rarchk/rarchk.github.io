@@ -27,6 +27,8 @@ function create_post()
 	echo "Enter type of the post(ref|blog): "
 	read typepost;
 	
+	site_meta_info
+
 	echo "Enter tags to classify your post (comma separated): "
 	read tags; 
 	
@@ -161,6 +163,23 @@ function projects()
 	echo $div1$REPOURL $div2 ${REPONAME^} $div3 $STARS $div4 $REPODESC $div5;	
 	#echo $REPODESC $div
 	rm repo.data 
+}
+
+function site_meta_info()
+{
+	tput setaf 2
+	echo "Site Wide Tags"
+	echo "=============="
+	tput setaf 5 
+	cat _posts/* | grep tags | cut -d '[' -f2 | cut -d ']' -f1 | sed -e "s/,/\n/g"\
+	| sort | uniq | awk '{print}' ORS=', ' | sed -e "s/$/\n\n/g" | fold -w 70 -s
+	tput setaf 2
+	echo "Site Wide Categories"
+	echo "===================="
+	tput setaf 5 
+	cat _posts/* | grep categories | cut -d '[' -f2 | cut -d ']' -f1 | sed -e "s/,/\n/g"\
+	| sort | uniq | awk '{print}' ORS=', ' | sed -e "s/$/\n\n/g" | fold -w 70 -s
+	tput setaf 9
 }
 
 echo ''' siteTools: Usage
