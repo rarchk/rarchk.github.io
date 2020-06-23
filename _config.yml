@@ -1,9 +1,9 @@
 # Site Info
 title: A λ's Journey To Π 
-tagline: ' Suggesting finite axioms for the infinite world.'
-description: 'My personal website'
+tagline: 'Exploring finite axioms for the infinite world.'
+description: 'Ronak Kogta personal blog'
 #baseurl: "" #/lanyon" # to be used when going for sub-directory  
-url:  "https://rarchk.github.io" #"http://localhost:4000" # 
+url:  "http://localhost:4000" #"https://rarchk.github.io" 
 logo: '/public/logo.png'
 
 # Site configurations
@@ -34,9 +34,9 @@ author:
   contact:
     linkedin:  https://www.linkedin.com/in/ronakkogta
     github:    https://github.com/rarchk
-    stack-overflow:    http://stackoverflow.com/users/733761/rarchk 
-    twitter:   https://twitter.com/rarchk
-    email:     https://www.google.com/recaptcha/mailhide/d?k\x3d01CIzJycu1pq2SHk5xVmq2RQ\x3d\x3d\x26c\x3dlBe-qtR3DTUeG_jldvPx-3bZV6esWSECuGNNBsZs9eA\x3d
+    #stack-overflow:    http://stackoverflow.com/users/733761/rarchk 
+    twitter:   https://twitter.com/ronakkogta
+    #email:     https://www.google.com/recaptcha/mailhide/d?k\x3d01CIzJycu1pq2SHk5xVmq2RQ\x3d\x3d\x26c\x3dlBe-qtR3DTUeG_jldvPx-3bZV6esWSECuGNNBsZs9eA\x3d
     rss: /atom.xml
   
 # Navigation (2nd level links supported)
@@ -70,7 +70,7 @@ category_page: '/blog/categories/'
 # Plugins
 mathjax: true # whether support mathjax
 google_analytics_token: 'UA-5613819-3' # leave blank if you don't want google analytics
-disqus_short_name: 'rarchkgithubio' # leave blank if you don't want disqus
+#disqus_short_name: 'rarchkgithubio' # leave blank if you don't want disqus
 
 # posts to show at github
 future: true

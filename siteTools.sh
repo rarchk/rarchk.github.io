@@ -120,7 +120,7 @@ function new_page()
 
 function  site_preview()
 {
-	bundle exec jekyll serve --host 0.0.0.0 --drafts --watch;
+	bundle exec jekyll serve --host 0.0.0.0 --drafts --incremental --watch;
 }
 
 function check()
