@@ -130,7 +130,9 @@ function check()
 
 function init()
 {
-	bundle install 
+	rbenv global 3.2.2
+	gem install bundler
+	bundle install
 }
 
 function tikzconvert()
