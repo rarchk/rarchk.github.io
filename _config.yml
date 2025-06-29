@@ -3,7 +3,7 @@ title: A λ's Journey To Π
 tagline: 'My excursions and flip-flops between determinism and non-determinism'
 description: 'Ronak Kogta personal blog'
 #baseurl: "" #/lanyon" # to be used when going for sub-directory  
-url:  "http://localhost:4000" #"https://rarchk.github.io" 
+url:  "https://rarchk.github.io" # "http://localhost:4000"
 logo: '/public/logo.png'
 
 # Site configurations
