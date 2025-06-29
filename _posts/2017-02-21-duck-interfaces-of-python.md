@@ -8,7 +8,31 @@ categories: [programming]
 
 Let's look at this piece of code: 
 
-<script src="https://gist.github.com/rarchk/83e16fb6dee003353e499320d3383888.js"></script>
+```python
+class hello():
+	def __len__(self):
+		return 0;  
+	
+	def __repr__(self):
+		return ('hello()'); 
+	
+	def __add__(self):
+		return ("Addition can happen"); 
+	
+	def __mul__(self):
+		return ("Multiplication can happen too");
+	
+	def __str__(self):
+		return ("Print me"); 
+	
+	def __getitem__(self,index):
+		return ("I was told to get %d" % index); 
+	
+	def __iter__(self):
+		a = ['world','!',',to','python']; 
+		for i in a: 
+			yield i; 
+```
 We all know that python has lists, tuples, dictionaries etc. where you can do array like operations like checking out length, setting or getting indexes, or iterating them in a loop.  With above code, we have basically made our hello function behave like one of those collections. 
 
 ```python

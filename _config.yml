@@ -1,18 +1,32 @@
 # Site Info
 title: A λ's Journey To Π 
-tagline: 'Exploring finite axioms for the infinite world.'
+tagline: 'My excursions and flip-flops between determinism and non-determinism'
 description: 'Ronak Kogta personal blog'
 #baseurl: "" #/lanyon" # to be used when going for sub-directory  
-url:  "http://localhost:4000" #"https://rarchk.github.io" 
+url:  "https://rarchk.github.io" # "http://localhost:4000"
 logo: '/public/logo.png'
 
 # Site configurations
 gems:
   - jekyll-paginate
+  - rouge
 #  - jekyll-language-plugin
+
 markdown: kramdown
 kramdown:
   input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+    theme: molokai
+  hard_wrap: true
+    
+
 excerpt_separator: "<!-- more -->"
 sass:
   style: compressed
