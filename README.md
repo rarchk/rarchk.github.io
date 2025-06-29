@@ -4,12 +4,44 @@ This is my personal website, where I share my thoughts, experiments and other li
 
 Still not used to many frontend stuff,  
 
+## Installation & Setup
+
+1. Install Ruby using rbenv (recommended)
+```bash
+# Install rbenv and ruby-build
+brew install rbenv ruby-build
+
+# Add rbenv to bash/zsh
+echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc  # For zsh
+source ~/.zshrc
+
+# Install Ruby 3.2.2
+rbenv install 3.2.2
+rbenv global 3.2.2
+
+# Install dependencies
+gem install bundler
+bundle install
+```
+
 ## Usage 
+
+### Running the Site Locally
+```bash
+bundle exec jekyll serve --livereload  # Start server with live reload
+```
+
+### Creating New Content
 ```bash
 source site_tools.sh 
-new_post # Creates a new post 
-new_page # Creates a new page 
+new_post  # Creates a new post 
+new_page  # Creates a new page 
 ```
+
+### Development Requirements
+- Ruby 3.2.2 or higher
+- Bundler 2.x
+- Jekyll 3.9.3 (via github-pages gem)
 ## Acknowledgements 
 This is a jekyll template based on [Lanyon](https://github.com/poole/lanyon). 
 
