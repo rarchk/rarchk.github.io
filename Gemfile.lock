@@ -314,6 +314,7 @@ DEPENDENCIES
   jekyll-sitemap
   jekyll-titles-from-headings
   rake
+  rouge
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)

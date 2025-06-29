@@ -9,30 +9,30 @@ Strace traces all system calls that have been invoked by a process/processes. It
 
 Let's look at this simple execution 
 
-```bash
+```shell
 $ time ls -R ~> files.txt
 $ time strace -c ls -R ~> files.txt #aggregates all sys calls 
 $ time strace -c ls -R ~> /dev/null
-```  
+```
 
 Now after looking at results, our first command performs twice as fast as the second one. And third one is taking slightly greater time than second one. 
 
 Reason for first observation is that strace uses **ptrace** to track all system calls of process by making target process a child.
 So that essentially is the cause of the delay
 
-```bash
+```shell
 $ time strace -c strace -c strace -c ls -R ~ > files.txt &
 $ ps aux | grep strace 
 
 18193  strace -c strace -c strace -c ls -R /home/ronak
 18195  strace -c strace -c ls -R /home/ronak
 18197  strace -c ls -R /home/ronak
-```    
+```
 Time in above is 5x more than our first command. Now for second observation, it is just that it takes a little longer to write to /dev/null, because time consumed by *open and fstat* system call is considerable to that of getdents, which was not the case with previous one. 
 
 ## Useful options 
 
-``` 
+```shell
 -f trace the forked children too
 -e trace=open,close trace particular system calls 
 -s 800 maximum string length
@@ -47,7 +47,7 @@ Time in above is 5x more than our first command. Now for second observation, it 
 *Here I run strace to know firefox behavior for 20 seconds to get different statstics.*
 
 #### firefox doing nothing, but opening resore tab
-```
+```shell
 % time     seconds  usecs/call     calls    errors syscall
 ------ ----------- ----------- --------- --------- ----------------
  99.88    0.016000         348        46           poll
